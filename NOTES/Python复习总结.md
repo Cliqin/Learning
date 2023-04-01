@@ -626,12 +626,12 @@ except FileNotFoundError:
 ## 模块下载(pip下载)
 
 - 找到解释器(interpreter)位置:
-  - 我的位置![image-20220705150957392](..\PhotoBed_Typora\image-20220705150957392.png)
-  - 安装在D盘的python当中的Scripts文件夹里![image-20220705151852157](..\PhotoBed_Typora\image-20220705151852157.png)
+  - 我的位置![image-20220705150957392](../PhotoBed_Typora/Python%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20220705150957392.png)
+  - 安装在D盘的python当中的Scripts文件夹里![image-20220705151852157](../PhotoBed_Typora/Python%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20220705151852157.png)
 
 - 如图
 
-  ![image-202207051509639](..\PhotoBed_Typora\image-20220705152509639.png)
+  ![image-20220705152509639](../PhotoBed_Typora/Python%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/image-20220705152509639.png)
   
 - #### 第三方库
 
@@ -1028,9 +1028,9 @@ print(response.read().decode('utf‐8'))
     ```
     
 
-![1](..\PhotoBed_Typora\1.png)
+![1](../PhotoBed_Typora/Python%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/1.png)
 
-<img src="..\PhotoBed_Typora\2.png" alt="2"  />
+![2](../PhotoBed_Typora/Python%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93.assets/2.png)
 
 
 
