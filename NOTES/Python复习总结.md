@@ -1,3 +1,11 @@
+
+
+目录
+
+[toc]
+
+
+
 # Python基础复习总结
 
 
@@ -618,12 +626,12 @@ except FileNotFoundError:
 ## 模块下载(pip下载)
 
 - 找到解释器(interpreter)位置:
-  - 我的位置![image-20220705150957392](C:\Users\Hejianhui\AppData\Roaming\Typora\typora-user-images\image-20220705150957392.png)
-  - 安装在D盘的python当中的Scripts文件夹里![image-20220705151852157](C:\Users\Hejianhui\AppData\Roaming\Typora\typora-user-images\image-20220705151852157.png)
+  - 我的位置![image-20220705150957392](..\PhotoBed_Typora\image-20220705150957392.png)
+  - 安装在D盘的python当中的Scripts文件夹里![image-20220705151852157](..\PhotoBed_Typora\image-20220705151852157.png)
 
 - 如图
 
-  ![image-202207051509639](C:\Users\Hejianhui\AppData\Roaming\Typora\typora-user-images\image-20220705152509639.png)
+  ![image-202207051509639](..\PhotoBed_Typora\image-20220705152509639.png)
   
 - #### 第三方库
 
@@ -1020,9 +1028,9 @@ print(response.read().decode('utf‐8'))
     ```
     
 
-![1](D:\编程资料\Python\笔记\path语法\1.png)
+![1](..\PhotoBed_Typora\1.png)
 
-<img src="D:\编程资料\Python\笔记\path语法\2.png" alt="2"  />
+<img src="..\PhotoBed_Typora\2.png" alt="2"  />
 
 
 
@@ -1165,7 +1173,7 @@ print(response.read().decode('utf‐8'))
 
   - （1）操作谷歌浏览器驱动下载地址 
 
-    - http://chromedriver.storage.googleapis.com/index.html 
+    - [链接](http://chromedriver.storage.googleapis.com/index.html )
     - edge
       - 
 
@@ -1174,7 +1182,7 @@ print(response.read().decode('utf‐8'))
 
   - （2）谷歌驱动和谷歌浏览器版本之间的映射表
 
-    - http://blog.csdn.net/huilan_same/article/details/51896672 
+    - [链接](http://blog.csdn.net/huilan_same/article/details/51896672 )
 
     
 
@@ -1182,7 +1190,7 @@ print(response.read().decode('utf‐8'))
 
   
 
-  - （4）pip install selenium
+  - （4）`pip install selenium`
 
   
 
