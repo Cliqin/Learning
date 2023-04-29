@@ -548,9 +548,9 @@ def down_load(page,content):
 
   - ### 注意
 
-    - #### `dumps()`方法的作用是把对象转换成为字符串，它本身不具备将数据写入到文件的功能。
+    - #### `dumps()`方法的作用是把**对象转换成为字符串**，它本身不具备将数据写入到文件的功能。
 
-    - #### `dump()`方法可以在将对象转换成为字符串的同时，指定一个文件对象，把转换后的字符串写入到这个文件里。
+    - #### `dump()`方法可以在将对象转换成为字符串的同时，指定一个文件对象，把转换后的**字符串写入到这个文件**里。
 
       - ```py
         import json
@@ -594,9 +594,9 @@ def down_load(page,content):
 
     - 总结:
 
-      1. ## loads传入的是字符串
+      1. ## loads传入的是**字符串**
 
-      2. ## load传入的是文件
+      2. ## load传入的是**文件**
 
 ​		
 
@@ -1387,7 +1387,7 @@ print(response.read().decode('utf‐8'))
 
 - #### get和post区别？
 
-  1. ### get请求的参数名字是params post请求的参数的名字是data
+  1. ### get请求的参数名字是**params** 		post请求的参数的名字是**data**
 
   2. ### 请求资源路径后面可以不加? 
 
@@ -1408,8 +1408,7 @@ print(response.read().decode('utf‐8'))
   url = 'http://www.baidu.com/s?'
   
   headers = {
-  'user‐agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
-  like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+  'user‐agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/65.0.3325.181 Safari/537.36'
   }
   
   data = {

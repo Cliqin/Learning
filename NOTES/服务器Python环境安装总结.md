@@ -2,68 +2,71 @@
 
 ------------------
 
-- ## Centos 安装python3.10.10
+## Centos Python
 
-  - 因为官网源下载比较慢，所以这里备份并替换为阿里云源，这样做不是必须的，视你的情况而定。
+​	安装python3.10.10
 
-    - ```shell
-      #替换为阿里云源
-      curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-      curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
-      ```
+- 因为官网源下载比较慢，所以这里备份并替换为阿里云源，这样做不是必须的，视你的情况而定。
 
-  - 然后安装依赖
+  - ```shell
+    #替换为阿里云源
+    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+    curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+    ```
 
-    - ```shell
-      yum -y groupinstall "Development tools"
-      yum install -y ncurses-devel gdbm-devel xz-devel sqlite-devel tk-devel uuid-devel readline-devel bzip2-devel libffi-devel
-      yum install -y openssl-devel openssl11 openssl11-devel
-      ```
+- 然后安装依赖
 
-  - 编译主要需要注意的问题是设置编译FLAG，以便使用最新的openssl库。
+  - ```shell
+    yum -y groupinstall "Development tools"
+    yum install -y ncurses-devel gdbm-devel xz-devel sqlite-devel tk-devel uuid-devel readline-devel bzip2-devel libffi-devel
+    yum install -y openssl-devel openssl11 openssl11-devel
+    ```
 
-    - ```shell
-      export CFLAGS=$(pkg-config --cflags openssl11)
-      export LDFLAGS=$(pkg-config --libs openssl11)
-      ```
+- 编译主要需要注意的问题是设置编译FLAG，以便使用最新的openssl库。
 
-  - 开始安装
+  - ```shell
+    export CFLAGS=$(pkg-config --cflags openssl11)
+    export LDFLAGS=$(pkg-config --libs openssl11)
+    ```
 
-    - ```shell
-      #解压然后进入目录
-      tar xvzf Python-3.10.10.tgz
-      cd Python-3.10.10
-      
-      # 安装
-      ./configure --enable-optimizations && make altinstall
-      
-      # 安装完成后验证一下是否安装成功
-      /usr/local/bin/python3.10 --version
-      /usr/local/bin/pip3.10 --version
-      ```
+- 开始安装
 
-  - 设置软链接
+  - ```shell
+    #解压然后进入目录
+    tar xvzf Python-3.10.10.tgz
+    cd Python-3.10.10
+    
+    # 安装
+    ./configure --enable-optimizations && make altinstall
+    
+    # 安装完成后验证一下是否安装成功
+    /usr/local/bin/python3.10 --version
+    /usr/local/bin/pip3.10 --version
+    ```
 
-    - ```shell
-      #先删掉自带的python软连接
-      rm -f python3
-      rm -f pip3
-      
-      ln -sf /usr/local/bin/python3.10 /usr/bin/python3
-      ln -sf /usr/local/bin/pip3.10  /usr/bin/pip3
-      ```
+- 设置软链接
+
+  - ```shell
+    #先删掉自带的python软连接
+    rm -f python3
+    rm -f pip3
+    
+    ln -sf /usr/local/bin/python3.10 /usr/bin/python3
+    ln -sf /usr/local/bin/pip3.10  /usr/bin/pip3
+    ```
 
 
-  ----
+----
 
+## Ubuntu Python
 
-- ## Ubuntu 安装python3.10.10
+​	安装python3.10.10
 
-  - 执行以下命令更新源：
+- 执行以下命令更新源：
 
-    - ```shell
-      sudo apt-get update
-      ```
+  - ```shell
+    sudo apt-get update
+    ```
 
 
   - 执行以下命令安装 Python3 的一些依赖库：
@@ -109,100 +112,100 @@
       sudo ln -s /usr/local/python3.10/bin/pip3.10 /usr/bin/pip3
       ```
 
+**注：这里我们不能将系统中的 python3 命令链接到 python3.10 版本（这里我已经踩坑），因为 python3.10 版本还是发型版本，并不是稳定版本，若更改后则会导致 Ubuntu 系统下的很多 python 文件无法打开（比如你的 gnome 终端）！**
 
-    **注：这里我们不能将系统中的 python3 命令链接到 python3.10 版本（这里我已经踩坑），因为 python3.10 版本还是发型版本，并不是稳定版本，若更改后则会导致 Ubuntu 系统下的很多 python 文件无法打开（比如你的 gnome 终端）！**
 
-    
+​    
 
 ----------
 
-- ## 自动生成requirement.txt
+## 	自动生成requirement.txt
 
-  ```shell
-  pip freeze > requirements.txt
-  ```
+```shell
+pip freeze > requirements.txt
+```
 
 
 ---
 
-- ## 安装宝塔面板
+## 安装宝塔面板
 
-  - Centos安装脚本
+- Centos安装脚本
 
-    - yum install
+  - yum install
 
-      ```shell
-      yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh ed8484bec
-      ```
+    ```shell
+    yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh ed8484bec
+    ```
 
-  - Ubuntu/Deepin安装脚本
+- Ubuntu/Deepin安装脚本
 
-    - ```shell
-      wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh ed8484bec
-      ```
+  - ```shell
+    wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh ed8484bec
+    ```
 
 
 -----
 
 
 
-- ## Centos 安装谷歌浏览器和driver
+## Centos Chrome driver
 
-  - ```shell
-    # 搞清楚linux是32bit or 64bit
-    echo "You are using $(getconf LONG_BIT) bit Linux distro."
-    
-    # download
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-    
-    # install
-    sudo yum install ./google-chrome-stable_current_*.rpm
-    
-    #查看版本
-    google-chrome --version
-    
-    # 2. 上传chromedriver 安装chromedriver
-    sudo yum install unzip
-    sudo unzip chromedriver_linux64.zip
-    sudo cp chromedriver /usr/bin
-    sudo chmod +x chromedriver
-    sudo chromedriver --version
-    ```
-    
-  - [ChromeDriver Mirror](https://link.zhihu.com/?target=http%3A//npm.taobao.org/mirrors/chromedriver/)
+- ```shell
+  # 搞清楚linux是32bit or 64bit
+  echo "You are using $(getconf LONG_BIT) bit Linux distro."
+  
+  # download
+  wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+  
+  # install
+  sudo yum install ./google-chrome-stable_current_*.rpm
+  
+  #查看版本
+  google-chrome --version
+  
+  # 2. 上传chromedriver 安装chromedriver
+  sudo yum install unzip
+  sudo unzip chromedriver_linux64.zip
+  sudo cp chromedriver /usr/bin
+  sudo chmod +x chromedriver
+  sudo chromedriver --version
+  ```
+  
+- [ChromeDriver Mirror](https://link.zhihu.com/?target=http%3A//npm.taobao.org/mirrors/chromedriver/)
 
 
 
 ---
 
-- ## Ubuntu 安装谷歌浏览器和driver
+## Ubuntu Chrome driver
 
-  - ```shell
-    # 搞清楚linux是32bit or 64bit
-    echo "You are using $(getconf LONG_BIT) bit Linux distro."
-    
-    # download  或者自己导入
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    
-    # install
-    sudo dpkg -i google-chrome-stable_current_amd64.deb
-    
-    #查看版本
-    google-chrome --version
-    
-    # 2. 上传chromedriver 安装chromedriver
-    sudo apt-get install unzip
-    sudo unzip chromedriver_linux64.zip
-    
-    # 先放到share里,然后在再bin里建立软连接
-    mv -f chromedriver /usr/local/share/chromedriver
-    ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-    ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
-    
-    #修改权限
-    sudo chmod +x chromedriver
-    
-    sudo chromedriver --version
-    ```
+- ```shell
+  # 搞清楚linux是32bit or 64bit
+  echo "You are using $(getconf LONG_BIT) bit Linux distro."
+  
+  # download  或者自己导入
+  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  
+  # install
+  sudo dpkg -i google-chrome-stable_current_amd64.deb
+  
+  #查看版本
+  google-chrome --version
+  
+  # 2. 上传chromedriver 安装chromedriver
+  sudo apt-get install unzip
+  sudo unzip chromedriver_linux64.zip
+  
+  # 先放到share里,然后在再bin里建立软连接
+  mv -f chromedriver /usr/local/share/chromedriver
+  ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+  ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+  
+  #修改权限
+  sudo chmod +x chromedriver
+  
+  sudo chromedriver --version
+  ```
 
-  - [ChromeDriver Mirror](https://link.zhihu.com/?target=http%3A//npm.taobao.org/mirrors/chromedriver/)
+- [ChromeDriver Mirror](https://registry.npmmirror.com/binary.html?path=chromedriver/)
