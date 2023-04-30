@@ -1,6 +1,6 @@
 # Note
 
-哈哈哈嘿嘿嘿![img](../PhotoBed_Typora/Note.assets/qqpyimg1680334539.gif)
+哈哈哈嘿嘿嘿
 
 
 
