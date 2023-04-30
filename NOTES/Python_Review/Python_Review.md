@@ -10,8 +10,6 @@
 
 
 
-## 
-
 用input()函数
 
 
@@ -45,7 +43,7 @@ elif score<60:
 	print('本次考试，等级为E')
 ```
 
-
+-----
 
 ## for循环
 
@@ -56,7 +54,7 @@ for 临时变量 in 列表或者字符串等可迭代对象:
 
 - range()表示范围
 
-
+-------
 
 ## 字符串高级(str)
 
@@ -107,7 +105,7 @@ s9 = 'a'
 print(s9.join('hello'))   #haealalao
 ```
 
-
+-------
 
 ## 列表高级(list)
 
@@ -204,7 +202,7 @@ c_list.remove(3)
 print(c_list)
 ```
 
-
+------
 
 ## 元组高级(tuple)
 
@@ -235,7 +233,7 @@ b_tuple = (5,)
 print(type(b_tuple))
 ```
 
-
+------
 
 ## 切片
 
@@ -263,7 +261,7 @@ print(s[:4])        #hell
 print(s[0:6:2])      #hlo
 ```
 
-
+------
 
 ## 字典高级(dic)
 
@@ -379,41 +377,41 @@ for item in person.items():
 
 - #### 复制字典
 
-  - 使用 `copy()` 方法来复制字典
+  使用 `copy()` 方法来复制字典
 
-    ```py
-    thisdict =	{
-      "brand": "Porsche",
-      "model": "911",
-      "year": 1963
-    }
-    mydict = thisdict.copy()
-    print(mydict)
-    ```
+  ```py
+  thisdict =	{
+    "brand": "Porsche",
+    "model": "911",
+    "year": 1963
+  }
+  mydict = thisdict.copy()
+  print(mydict)
+  ```
 
-  - 使用 `dict()` `方法创建字典的副本`
+  使用 `dict()` `方法创建字典的副本`
 
-    ```py
-    thisdict =	{
-      "brand": "Porsche",
-      "model": "911",
-      "year": 1963
-    }
-    mydict = dict(thisdict)
-    print(mydict)
-    ```
+  ```py
+  thisdict =	{
+    "brand": "Porsche",
+    "model": "911",
+    "year": 1963
+  }
+  mydict = dict(thisdict)
+  print(mydict)
+  ```
 
-​			
+---------
 
 ## 文件
 
-
-
 - #### 使用open函数，可以打开一个已经存在的文件，或者创建一个新文件,需要自己关闭文件
 
-  ```py
-  f = open('test.txt', 'w') #默认情况下使用gdk的编码,要想汉字或中文,要指定编码格式为encoding = utf-8
-  ```
+*默认情况下使用gdk的编码,要想汉字或中文,要指定编码格式为encoding = 'utf-8'*
+
+```py
+f = open('test.txt', 'w') #默认情况下使用gdk的编码,要想汉字或中文,要指定编码格式为encoding = utf-8
+```
 
 
 - #### 使用with open函数,会自动关闭文件
@@ -430,20 +428,20 @@ def down_load(page,content):
 
 - #### 文件路径
 
-  - 绝对路径：指的是绝对位置，完整地描述了目标的所在地，所有目录层级关系是一目了然的
+  绝对路径：指的是绝对位置，完整地描述了目标的所在地，所有目录层级关系是一目了然的
 
-    - 例如： `D:\python`，从电脑的盘符开始，表示的就是一个绝对路径。 
+  - 例如： `D:\python`，从电脑的盘符开始，表示的就是一个绝对路径。 
 
-    
+  
 
-  - 相对路径：是从当前文件所在的文件夹开始的路径。
+  相对路径：是从当前文件所在的文件夹开始的路径。
 
-    -  `test.txt` ，是在当前文件夹查找 `test.txt `文件 
-    - `./test.txt`，也是在当前文件夹里查找 `test.txt` 文件， 
-    - `./` 表示的是当前文件夹。
-    - `../test.txt` ，从当前文件夹的上一级文件夹里查找 `test.txt` 文件。 
-    - `../` 表示的是上一级文件夹
-    - `demo/test.tx` ，在当前文件夹里查找 `demo` 这个文件夹，并在这个文件夹里查找 `test.txt` 文件。
+  -  `test.txt` ，是在当前文件夹查找 `test.txt `文件 
+  - `./test.txt`，也是在当前文件夹里查找 `test.txt` 文件， 
+  - `./` 表示的是当前文件夹。
+  - `../test.txt` ，从当前文件夹的上一级文件夹里查找 `test.txt` 文件。 
+  - `../` 表示的是上一级文件夹
+  - `demo/test.tx` ，在当前文件夹里查找 `demo` 这个文件夹，并在这个文件夹里查找 `test.txt` 文件。
 
 - #### 访问模式
 
@@ -500,9 +498,9 @@ def down_load(page,content):
   ```
 
   - 读数据(readlines)
-    - `readlines`可以按照行的方式把整个文件中的内容进行一次性读取，并且返回的是一个列表，其中每一行为列表的 一个元素。
-
-
+  
+  `readlines`可以按照行的方式把整个文件中的内容进行**一次性读取**，并且返回的是一个列表，其中每一行为列表的 一个元素。
+  
   ```py
   f = open('test.txt', 'r')
   
@@ -515,92 +513,76 @@ def down_load(page,content):
   f.close()
   ```
 
-
-
-
-
-
+---------
 
 
 ## 序列化与反序列化
 
-- ###### 通过文件操作，我们可以将字符串写入到一个本地文件。但是，如果是一个对象(例如列表、字典、元组等)，就无 法直接写入到一个文件里，需要对这个对象进行序列化，然后才能写入到文件里。
+通过文件操作，我们可以将字符串写入到一个本地文件。但是，如果是一个**对象(例如列表、字典、元组等)，就无法直接写入到一个文件**里，需要对这个对象进行序列化，然后才能写入到文件里。
 
-  ----------------------------------
-
-- ##### 利用json模块来实现序列化与反序列化
-
-----------
+利用json模块来实现序列化与反序列化
 
 - ### 序列化
 
-  - ```py
-    import json
-    file = open('names.txt', 'w')
-    names = ['zhangsan', 'lisi', 'wangwu', 'jerry', 'henry', 'merry', 'chris']
-    # file.write(names) 出错，不能直接将列表写入到文件里
-    # 可以调用 json的dumps方法，传入一个对象参数
-    result = json.dumps(names)
-    # dumps 方法得到的结果是一个字符串
-    print(type(result)) # <class 'str'>
-    # 可以将字符串写入到文件里
-    file.write(result)
-    file.close()
-    ```
+  ```py
+  import json
+  file = open('names.txt', 'w')
+  names = ['zhangsan', 'lisi', 'wangwu', 'jerry', 'henry', 'merry', 'chris']
+  # file.write(names) 出错，不能直接将列表写入到文件里
+  # 可以调用 json的dumps方法，传入一个对象参数
+  result = json.dumps(names)
+  # dumps 方法得到的结果是一个字符串
+  print(type(result)) # <class 'str'>
+  # 可以将字符串写入到文件里
+  file.write(result)
+  file.close()
+  ```
 
-    
+  #### 注意:
 
-  - ### 注意
+  `dumps()`方法的作用是把**对象转换成为字符串**，它本身不具备将数据写入到文件的功能。
 
-    - #### `dumps()`方法的作用是把**对象转换成为字符串**，它本身不具备将数据写入到文件的功能。
+  `dump()`方法可以在将对象转换成为字符串的同时，指定一个文件对象，把转换后的**字符串写入到这个文件**里。
 
-    - #### `dump()`方法可以在将对象转换成为字符串的同时，指定一个文件对象，把转换后的**字符串写入到这个文件**里。
-
-      - ```py
-        import json
-        
-        # dump方法可以接收一个文件参数，在将对象转换成为字符串的同时写入到文件里
-        json.dump(names, file)
-        file.close()
-        ```
-        
-  ------------------------------
-
-
-
-
+  ```py
+  import json
+  
+  # dump方法可以接收一个文件参数，在将对象转换成为字符串的同时写入到文件里
+  json.dump(names, file)
+  file.close()
+  ```
+  
+  
 
 - ### 反序列化
 
   - #### 使用loads或load方法
 
-    - ```py
-      import json
-      
-      # 调用loads方法，传入一个字符串，可以将这个字符串加载成为Python的对象
-      result = json.loads('["zhangsan", "lisi", "wangwu", "jerry", "henry", "merry", "chris"]')
-      
-      print(type(result)) # <class 'list'>
-      ```
+    ```py
+    import json
+    
+    # 调用loads方法，传入一个字符串，可以将这个字符串加载成为Python的对象
+    result = json.loads('["zhangsan", "lisi", "wangwu", "jerry", "henry", "merry", "chris"]')
+    
+    print(type(result)) # <class 'list'>
+    ```
 
-    - ```py
-      import json
-      
-      # 以可读方式打开一个文件
-      file = open('names.txt', 'r')
-      
-      # 调用load方法，将文件里的内容加载成为一个Python对象
-      result = json.load(file)
-      
-      print(result)
-      file.close()
-      ```
+    ```py
+    import json
+    
+    # 以可读方式打开一个文件
+    file = open('names.txt', 'r')
+    
+    # 调用load方法，将文件里的内容加载成为一个Python对象
+    result = json.load(file)
+    
+    print(result)
+    file.close()
+    ```
 
-    - 总结:
+    区别:
 
-      1. ## loads传入的是**字符串**
-
-      2. ## load传入的是**文件**
+    #### loads传入的是**字符串** , load传入的是**文件**
 
 ​		
 
@@ -623,9 +605,9 @@ except FileNotFoundError:
 
 
 
+------
+
 # Python爬虫复习总结
-
-
 
 ## 模块下载(pip下载)
 
@@ -713,61 +695,57 @@ except FileNotFoundError:
 
 ### 响应所用的六个方法
 
-- 
-  
-- | 类型                  | models.Response                 |
-  | :-------------------- | :------------------------------ |
-  | response.read()       | 字节形式读取二进制              |
-  | response.read(5)      | 字节形式读取二进制              |
-  | response.readline()   | 字节形式读取二进制              |
-  | response.readlines()  | 字节形式读取二进制              |
-  |                       |                                 |
-  | response.geturl()     | 获取请求的url                   |
-  | response.getcode()    | 响应的状态码                    |
-  | response.getheaders() | 响应的头信息,获取是一个状态信息 |
+| 类型                  | models.Response                 |
+| :-------------------- | :------------------------------ |
+| response.read()       | 字节形式读取二进制              |
+| response.read(5)      | 字节形式读取二进制              |
+| response.readline()   | 字节形式读取二进制              |
+| response.readlines()  | 字节形式读取二进制              |
+|                       |                                 |
+| response.geturl()     | 获取请求的url                   |
+| response.getcode()    | 响应的状态码                    |
+| response.getheaders() | 响应的头信息,获取是一个状态信息 |
 
-- 
-  
-  ```py
-  import urllib.request
-  
-  url = 'http://www.baidu.com'
-  
-  # 模拟浏览器向服务器发送请求
-  response = urllib.request.urlopen(url)
-  
-  # 一个类型和六个方法
-  response是HTTPResponse的类型
-  print(type(response))
-  
-  # 按照一个字节一个字节的去读
-  content = response.read()  #字节形式读取二进制
-  print(content)
-  
-  # 返回多少个字节
-  content = response.read(5)  #字节形式读取二进制
-  print(content)
-  
-  # 读取一行
-  content = response.readline()  #字节形式读取二进制
-  print(content)
-  
-  #一行一行读,直到读完
-  content = response.readlines()  #字节形式读取二进制
-  print(content)
-  
-  # 返回状态码  如果是200了 那么就证明我们的逻辑没有错
-  print(response.getcode())
-  
-  # 返回的是url地址
-  print(response.geturl())
-  
-  # 获取是一个状态信息
-  print(response.getheaders())
-  
-  # 一个类型 HTTPResponse
-  # 六个方法 read  readline  readlines  getcode geturl getheaders
-  ```
+```py
+import urllib.request
+
+url = 'http://www.baidu.com'
+
+# 模拟浏览器向服务器发送请求
+response = urllib.request.urlopen(url)
+
+# 一个类型和六个方法
+response是HTTPResponse的类型
+print(type(response))
+
+# 按照一个字节一个字节的去读
+content = response.read()  #字节形式读取二进制
+print(content)
+
+# 返回多少个字节
+content = response.read(5)  #字节形式读取二进制
+print(content)
+
+# 读取一行
+content = response.readline()  #字节形式读取二进制
+print(content)
+
+#一行一行读,直到读完
+content = response.readlines()  #字节形式读取二进制
+print(content)
+
+# 返回状态码  如果是200了 那么就证明我们的逻辑没有错
+print(response.getcode())
+
+# 返回的是url地址
+print(response.geturl())
+
+# 获取是一个状态信息
+print(response.getheaders())
+
+# 一个类型 HTTPResponse
+# 六个方法 read  readline  readlines  getcode geturl getheaders
+```
 
 ------------------------------------------
 
@@ -775,11 +753,11 @@ except FileNotFoundError:
 
 - #### urllib.parse.quote（）
 
-  - 导包
+  **导包**
 
-  - ==将中文转换为Unicode格式==
+  **将中文转换为Unicode格式**
 
-  - #### ==urllib.request.Request来定制请求头==
+  **urllib.request.Request来定制请求头**
 
 ```py
 import urllib.request
@@ -795,11 +773,11 @@ response = urllib.request.urlopen(request)
 
 - #### urllib.parse.urlencode（）
 
-  - 导包
+  **导包**
 
-  - ==将多个参数转换为Unicode格式==
+  **将多个参数转换为Unicode格式**
 
-  - #### ==urllib.request.Request来定制请求头==
+  **urllib.request.Request来定制请求头**
 
 ```py
 import urllib.request
@@ -821,7 +799,7 @@ request = urllib.request.Request(url=url,headers=headers)
 
 ### post请求
 
-- #### ==urllib.request.Request来定制请求头==
+- #### urllib.request.Request来定制请求头
 
 ```py
 eg:百度翻译
@@ -846,169 +824,159 @@ print(response.read().decode('utf‐8'))
 
 ----------------------------------------------
 
-- # 总结
+总结:
 
-  - ### `get请求方式的参数必须编码，参数是拼接到url后面，编码之后不需要调用encode方法` 
+- ### `get请求方式的参数必须编码，参数是拼接到url后面，编码之后不需要调用encode方法` 
 
-  - ### `post请求方式的参数必须编码，参数是放在请求对象定制的方法中，编码之后需要调用encode方法`
+- ### `post请求方式的参数必须编码，参数是放在请求对象定制的方法中，编码之后需要调用encode方法`
 
-----------------------------
-
-
+------
 
 ### Cookie登陆
 
 - #### 绕过登陆直接进入页面
 
-  - ```py
-    #cookie中携带着你的登陆信息   如果有登陆之后的cookie,那么我们就可以携带cookie进入到任何页面
-    #referer判断当前路径是不是由上一个路径进来的   一般情况下 是做图片防盗链
-    ```
+  ```py
+  #cookie中携带着你的登陆信息   如果有登陆之后的cookie,那么我们就可以携带cookie进入到任何页面
+  #referer判断当前路径是不是由上一个路径进来的   一般情况下 是做图片防盗链
+  ```
 
 - #### 通过selenium获取cookies
 
-  - 
+  ```py
+  from selenium import webdriver
+  
+  url = 'http://www.baidu.com'
+  driver = webdriver.Chrome()
+  driver.get(url)
+  
+  #关键步骤
+  cookies = {data['name']:data['value']for data in driver.get_cookies()}
+  ```
 
-  - ```py
-    from selenium import webdriver
-    
-    url = 'http://www.baidu.com'
-    driver = webdriver.Chrome()
-    driver.get(url)
-    
-    #关键步骤
-    cookies = {data['name']:data['value']for data in driver.get_cookies()}
-    ```
-
-
-----------------------
-
-
+----
 
 ### Handler处理器(代理手段)
 
-- #### Handler 定制更高级的请求头（随着业务逻辑的复杂 请求对象的定制已经满足不了我们的需求（动态cookie和代理 不能使用请求对象的定制）
+Handler 定制更高级的请求头（随着业务逻辑的复杂 请求对象的定制已经满足不了我们的需求（动态cookie和代理 不能使用请求对象的定制）
 
-- #### handler、build_opener、open
+handler、build_opener、open
 
-  - 基本格式
+- 基本格式
 
-    - ```py
-      import urllib.request
-      
-      request = urllib.request.Request(url=url,headers=headers)
-      
-      handler = urllib.request.HTTPHandler() #HTTPHandle      handler
-      opener = urllib.request.build_opener(handler) #build_opener
-      response = opener.open(request) #open
-      
-      print(response.read().decode('utf‐8'))
-      
-      ```
 
-  - #### 使用代理时,只需要变一个名字(ProxyHandler)
+```py
+import urllib.request
 
-    - ```py
-      eg:
-      import urllib.request
-      
-      request = urllib.request.Request(url=url,headers=headers)
-      
-      proxies = {'http':'117.141.155.244:53281'}
-      
-      handler = urllib.request.ProxyHandler(proxies=proxies) #ProxyHandler
-      opener = urllib.request.build_opener(handler)
-      response = opener.open(request)
-      
-      content = response.read().decode('utf‐8')
-      ```
+request = urllib.request.Request(url=url,headers=headers)
 
-  ------------------------------------------------------
+handler = urllib.request.HTTPHandler() #HTTPHandle      handler
+opener = urllib.request.build_opener(handler) #build_opener
+response = opener.open(request) #open
 
-- #### 代理池
+print(response.read().decode('utf‐8'))
 
-  - #### random模块
+```
 
-    - ```py
-      proxies_pool = [
-          {'http':'118.24.219.151:16817'},
-          {'http':'118.24.219.151:16817'},
-      ]
-      
-      import random
-      
-      proxies = random.choice(proxies_pool)
-      ```
+- 使用代理时,只需要变一个名字(ProxyHandler)
+
+```py
+eg:
+import urllib.request
+
+request = urllib.request.Request(url=url,headers=headers)
+
+proxies = {'http':'117.141.155.244:53281'}
+
+handler = urllib.request.ProxyHandler(proxies=proxies) #ProxyHandler
+opener = urllib.request.build_opener(handler)
+response = opener.open(request)
+
+content = response.read().decode('utf‐8')
+```
+
+- 代理池
+
+​	random模块
+
+```py
+proxies_pool = [
+    {'http':'118.24.219.151:16817'},
+    {'http':'118.24.219.151:16817'},
+]
+
+import random
+
+proxies = random.choice(proxies_pool)
+```
 
 -------------------------------------------------
 
 ## 解析数据
 
-----------------------------------------------------------------
-
 ### XPATH
 
 - ### lxml
 
-  - #### 安装模块(lxml)
+  安装模块(lxml)
 
-    - ```py
-      1.安装lxml库
-      	pip install lxml ‐i https://pypi.douban.com/simple
-      2.导入lxml.etree
-      	from lxml import etree
-      3.#etree.parse() #解析本地文件
-      	html_tree = etree.parse('XX.html')
-      4.#etree.HTML() #服务器响应文件
-      	html_tree = etree.HTML(response.read().decode('utf‐8')
-      4.html_tree.xpath(xpath路径)
-      ```
+  ```py
+  1.安装lxml库
+  	pip install lxml ‐i https://pypi.douban.com/simple
+  2.导入lxml.etree
+  	from lxml import etree
+  3.#etree.parse() #解析本地文件
+  	html_tree = etree.parse('XX.html')
+  4.#etree.HTML() #服务器响应文件
+  	html_tree = etree.HTML(response.read().decode('utf‐8')
+  4.html_tree.xpath(xpath路径)
+  ```
 
-  - #### 开始解析
+- #### 开始解析
 
-    - #### 解析规则
+  解析规则
 
-      - ```py
-        from lxml import etree
-        
-        # xpath解析
-        # （1）本地文件                                                etree.parse
-        # （2）服务器响应的数据  response.read().decode('utf-8') *****   etree.HTML()
-        
-        # xpath解析本地文件
-        tree = etree.parse('070_尚硅谷_爬虫_解析_xpath的基本使用.html')
-        
-        #tree.xpath('xpath路径')
-        
-        # 查找ul下面的li
-        li_list = tree.xpath('//body/ul/li')
-        
-        # 查找所有有id的属性的li标签
-        # text()获取标签中的内容
-        li_list = tree.xpath('//ul/li[@id]/text()')
-        
-        # 找到id为l1的li标签  注意引号的问题
-        li_list = tree.xpath('//ul/li[@id="l1"]/text()')
-        
-        # 查找到id为l1的li标签的class的属性值
-        li = tree.xpath('//ul/li[@id="l1"]/@class')
-        
-        # 查询id中包含l的li标签
-        #/text()来获取值
-        li_list = tree.xpath('//ul/li[contains(@id,"l")]/text()')
-        
-        # 查询id的值以l开头的li标签
-        li_list = tree.xpath('//ul/li[starts-with(@id,"c")]/text()')
-        
-        #查询id为l1和class为c1的
-        li_list = tree.xpath('//ul/li[@id="l1" and @class="c1"]/text()')
-        
-        li_list = tree.xpath('//ul/li[@id="l1"]/text() | //ul/li[@id="l2"]/text()')
-        
-        # 判断列表的长度
-        print(li_list)
-        print(len(li_list))
-        ```
+  ```py
+  from lxml import etree
+  
+  # xpath解析
+  # （1）本地文件                                                etree.parse
+  # （2）服务器响应的数据  response.read().decode('utf-8') *****   etree.HTML()
+  
+  # xpath解析本地文件
+  tree = etree.parse('070_尚硅谷_爬虫_解析_xpath的基本使用.html')
+  
+  #tree.xpath('xpath路径')
+  
+  # 查找ul下面的li
+  li_list = tree.xpath('//body/ul/li')
+  
+  # 查找所有有id的属性的li标签
+  # text()获取标签中的内容
+  li_list = tree.xpath('//ul/li[@id]/text()')
+  
+  # 找到id为l1的li标签  注意引号的问题
+  li_list = tree.xpath('//ul/li[@id="l1"]/text()')
+  
+  # 查找到id为l1的li标签的class的属性值
+  li = tree.xpath('//ul/li[@id="l1"]/@class')
+  
+  # 查询id中包含l的li标签
+  #/text()来获取值
+  li_list = tree.xpath('//ul/li[contains(@id,"l")]/text()')
+  
+  # 查询id的值以l开头的li标签
+  li_list = tree.xpath('//ul/li[starts-with(@id,"c")]/text()')
+  
+  #查询id为l1和class为c1的
+  li_list = tree.xpath('//ul/li[@id="l1" and @class="c1"]/text()')
+  
+  li_list = tree.xpath('//ul/li[@id="l1"]/text() | //ul/li[@id="l2"]/text()')
+  
+  # 判断列表的长度
+  print(li_list)
+  print(len(li_list))
+  ```
 
 ---------------------------------------------------
 
@@ -1016,268 +984,269 @@ print(response.read().decode('utf‐8'))
 
 - #### 安装模块
 
-  - ```py
-    #pip安装：
-    pip install jsonpath
-    ```
+  ```py
+  #pip安装：
+  pip install jsonpath
+  ```
 
 - #### 使用
 
-  - ```py
-    import json
-    import jsonpath
-    
-    obj = json.load(open('json文件', 'r', encoding='utf‐8'))
-    ret = jsonpath.jsonpath(obj, 'jsonpath语法')
-    ```
-    
+  ```py
+  import json
+  import jsonpath
+  
+  obj = json.load(open('json文件', 'r', encoding='utf‐8'))
+  ret = jsonpath.jsonpath(obj, 'jsonpath语法')
+  ```
+  
 
 ![1](assets/1.png)
 
 ![2](assets/2.png)
 
-
-
-------------------------------------
-
-
+----------------
 
 ### BEAUTIFUL SOUP
 
 - #### 安装模块
 
-  - ```py
-    1.安装
-    pip install bs4
-    ```
+  ```py
+  1.安装
+  pip install bs4
+  ```
 
 - #### 接收对象
 
-  - ```py
-    #2.导入
-    from bs4 import BeautifulSoup
-    
-    #3.创建对象
-    #服务器响应的文件生成对象
-    soup = BeautifulSoup(response.read().decode(), 'lxml')
-    
-    #本地文件生成对象
-    soup = BeautifulSoup(open('1.html'), 'lxml')
-    
-    #注意：默认打开文件的编码格式gbk所以需要指定打开编码格式
-    ```
+  ```py
+  #2.导入
+  from bs4 import BeautifulSoup
+  
+  #3.创建对象
+  #服务器响应的文件生成对象
+  soup = BeautifulSoup(response.read().decode(), 'lxml')
+  
+  #本地文件生成对象
+  soup = BeautifulSoup(open('1.html'), 'lxml')
+  
+  #注意：默认打开文件的编码格式gbk所以需要指定打开编码格式
+  ```
 
 - #### 节点定位
 
-  - #### 比较人性化
+  比较人性化
 
-  - ```py
-    1.根据标签名查找节点
-    	soup.a 【注】只能找到第一个a
-    	soup.a.name
-    	soup.a.attrs
-        	
-    2.函数
-    
-    (1)#.find(返回一个对象)
-    	find('a')：#只找到第一个a标签
-    	find('a', title='名字')#标签
-    	find('a', class_='名字')#标签  class要改成class_
-        
-    (2)#.find_all(返回一个列表)
-    	find_all('a') 查找到所有的a
-    	find_all(['a', 'span']) 返回所有的a和span #注意格式,要写成列表
-    	find_all('a', limit=2) 只找前两个a
-        
-    (3)#.select(根据选择器得到节点对象)【推荐】(CSS语法)
-    	# element
-    		eg:p
-            print(soup.select('a'))	#多个a标签
-            
-    	# .class
-    		eg:.firstname
-            print(soup.select('.a1'))
-            
-    	# #id
-    		eg:#firstname
-            print(soup.select('#l1'))
-            
-    	# 属性选择器
-    		[attribute]
-    			eg:li = soup.select('li[class]')
-    		[attribute=value]
-    			eg:li = soup.select('li[class="hengheng1"]')
-            
-    	# 层级选择器
-        
-        	#  后代选择器
-    		element element
-    			div p
-            
-            # 子代选择器
-            # 注意：很多的计算机编程语言中 如果不加空格不会输出内容  但是在bs4中 不会报错 会显示内容
-    		element>element
-    			div>p
-            
-            # 找到div标签和p标签的所有的对象
-    		element,element
-    			div,p    
-    				eg:soup = soup.select('a,span')
+  ```py
+  1.根据标签名查找节点
+  	soup.a 【注】只能找到第一个a
+  	soup.a.name
+  	soup.a.attrs
+      	
+  2.函数
+  
+  (1)#.find(返回一个对象)
+  	find('a')：#只找到第一个a标签
+  	find('a', title='名字')#标签
+  	find('a', class_='名字')#标签  class要改成class_
+      
+  (2)#.find_all(返回一个列表)
+  	find_all('a') 查找到所有的a
+  	find_all(['a', 'span']) 返回所有的a和span #注意格式,要写成列表
+  	find_all('a', limit=2) 只找前两个a
+      
+  (3)#.select(根据选择器得到节点对象)【推荐】(CSS语法)
+  	# element
+  		eg:p
+          print(soup.select('a'))	#多个a标签
+          
+  	# .class
+  		eg:.firstname
+          print(soup.select('.a1'))
+          
+  	# #id
+  		eg:#firstname
+          print(soup.select('#l1'))
+          
+  	# 属性选择器
+  		[attribute]
+  			eg:li = soup.select('li[class]')
+  		[attribute=value]
+  			eg:li = soup.select('li[class="hengheng1"]')
+          
+  	# 层级选择器
+      
+      	#  后代选择器
+  		element element
+  			div p
+          
+          # 子代选择器
+          # 注意：很多的计算机编程语言中 如果不加空格不会输出内容  但是在bs4中 不会报错 会显示内容
+  		element>element
+  			div>p
+          
+          # 找到div标签和p标签的所有的对象
+  		element,element
+  			div,p    
+  				eg:soup = soup.select('a,span')
+  ```
+
+  - #### 注意
+
+    ```py
+    # select()一般返回的是列表,记得选其中的内容才会变成标签
     ```
 
-    - #### 注意
-
-      - ```py
-        # select()一般返回的是列表,记得选其中的内容才会变成标签
-        ```
-
-        
+    
 
 - #### 获取内容
 
-  - ```py
-    (1) #获取节点内容：适用于标签中嵌套标签的结构
-    	obj.string
-    	obj.get_text() #【推荐】
-        
-    (2) #节点的属性
-    	tag.name  #获取标签名
-    		eg:tag = find('li')
-    			print(tag.name)
-                          
-    	
-        #ag.attrs将属性值作为一个字典返回
-        # 格式为 {'id': 'p1', 'class': ['p1']}
-                      
-    (3) #获取节点属性值
-    	obj.attrs.get('title') #【常用】
-    	obj.get('title')
-    	obj['title']
-    ```
-
-  - #### 注意:
-
-    - ```py
-      # 如果标签对象中 只有内容 那么string和get_text()都可以使用
+  ```py
+  (1) #获取节点内容：适用于标签中嵌套标签的结构
+  	obj.string
+  	obj.get_text() #【推荐】
       
-      # 如果标签对象中 除了内容还有标签 那么string就获取不到数据 而get_text()是可以获取数据
-      ```
+  (2) #节点的属性
+  	tag.name  #获取标签名
+  		eg:tag = find('li')
+  			print(tag.name)
+                        
+  	
+      #ag.attrs将属性值作为一个字典返回
+      # 格式为 {'id': 'p1', 'class': ['p1']}
+                    
+  (3) #获取节点属性值
+  	obj.attrs.get('title') #【常用】
+  	obj.get('title')
+  	obj['title']
+  ```
 
+  #### 注意:
 
+  ```py
+  # 如果标签对象中 只有内容 那么string和get_text()都可以使用
+  
+  # 如果标签对象中 除了内容还有标签 那么string就获取不到数据 而get_text()是可以获取数据
+  ```
 
---------------------------------------------
-
-
+---------
 
 ## Selenium
 
+#### 如何安装selenium？ 
 
+- 操作谷歌浏览器驱动下载地址 
 
-- #### 如何安装selenium？ 
+- [驱动下载地址](http://chromedriver.storage.googleapis.com/index.html )
 
-  - （1）操作谷歌浏览器驱动下载地址 
+  - 谷歌驱动和谷歌浏览器版本之间的映射表
 
-    - [链接](http://chromedriver.storage.googleapis.com/index.html )
-    - edge
-      - 
+    - [映射表](http://blog.csdn.net/huilan_same/article/details/51896672 )
 
+  - 查看谷歌浏览器版本 谷歌浏览器右上角‐‐>帮助‐‐>关于 
 
-​    
+  - `pip install selenium`
 
-  - （2）谷歌驱动和谷歌浏览器版本之间的映射表
+-------
 
-    - [链接](http://blog.csdn.net/huilan_same/article/details/51896672 )
+#### 使用前提
 
+```py
+#（1）导入：
+	from selenium import webdriver
+#（2）创建谷歌浏览器操作对象：
+	path = 谷歌浏览器驱动文件路径
+	browser = webdriver.Chrome(path)
+#（3）访问网址
+	url = 要访问的网址
+	browser.get(url)
+```
+
+------
+
+#### 元素定位
+
+导包
+
+```py
+from selenium.webdriver.common.by import By
+```
+
+```py
+#1.find_element_by_id
+	eg:button = browser.find_element_by_id('su')
     
-
-  - （3）查看谷歌浏览器版本 谷歌浏览器右上角‐‐>帮助‐‐>关于 
-
-  
-
-  - （4）`pip install selenium`
-
-  
-
-- #### 使用步骤
-
-  - ```py
-    #（1）导入：
-    	from selenium import webdriver
-    #（2）创建谷歌浏览器操作对象：
-    	path = 谷歌浏览器驱动文件路径
-    	browser = webdriver.Chrome(path)
-    #（3）访问网址
-    	url = 要访问的网址
-    	browser.get(url)
-    ```
-
-
-
-- #### 元素定位
-
-  - #### 导包
-
-    - 
-
-    - ```py
-      from selenium.webdriver.common.by import By
-      ```
-
-  - ```py
-    #1.find_element_by_id
-    	eg:button = browser.find_element_by_id('su')
-        
-    #2.find_elements_by_name
-    	eg:name = browser.find_element_by_name('wd')
-        
-    #3.find_elements_by_xpath
-    	eg:xpath1 = browser.find_elements_by_xpath('//input[@id="su"]')
-        
-    #4.find_elements_by_tag_name
-    	eg:names = browser.find_elements_by_tag_name('input')
-        
-    #5.find_elements_by_css_selector改为browser.find_elements(by=By.CSS_SELECTOR, value='')
-    	eg:my_input = browser.find_elements_by_css_selector('#kw')[0]
-        browser.find_elements(by=By.CSS_SELECTOR, value='.header-login-entry')[0]
-        
-    #6.find_elements_by_link_text
-    	eg:browser.find_element_by_link_text("新闻")
-    ```
-
+#2.find_elements_by_name
+	eg:name = browser.find_element_by_name('wd')
     
-
-- #### 元素信息与交互
-
-  - ```py
-    #获取元素属性
-    	.get_attribute('class')
-    #获取元素文本
-    	.text
-    #获取标签名
-    	.tag_name
+#3.find_elements_by_xpath
+	eg:xpath1 = browser.find_elements_by_xpath('//input[@id="su"]')
     
-    #点击:
-    	click()
-    #输入:
-    	send_keys()
-    #后退操作:
-    	browser.back()
-    #前进操作:
-    	browser.forword()
-    #模拟JS滚动:
-    	js='document.documentElement.scrollTop=100000'
-    	browser.execute_script(js) 执行js代码
-    #获取网页代码：
-    	page_source
-        
-    #截图:
-    	browser.save_screenshot('baidu.png')
-        
-    #退出：
-    	browser.quit()
-    ```
+#4.find_elements_by_tag_name
+	eg:names = browser.find_elements_by_tag_name('input')
+    
+#5.find_elements_by_css_selector改为browser.find_elements(by=By.CSS_SELECTOR, value='')
+	eg:my_input = browser.find_elements_by_css_selector('#kw')[0]
+    browser.find_elements(by=By.CSS_SELECTOR, value='.header-login-entry')[0]
+    
+#6.find_elements_by_link_text
+	eg:browser.find_element_by_link_text("新闻")
+```
 
-- 
+----------
+
+#### 元素信息与交互
+
+```py
+#获取元素属性
+	.get_attribute('class')
+#获取元素文本
+	.text
+#获取标签名
+	.tag_name
+
+#点击:
+	click()
+#输入:
+	send_keys()
+#后退操作:
+	browser.back()
+#前进操作:
+	browser.forword()
+#模拟JS滚动:
+	js='document.documentElement.scrollTop=100000'
+	browser.execute_script(js) 执行js代码
+#获取网页代码：
+	page_source
+    
+#截图:
+	browser.save_screenshot('baidu.png')
+    
+#退出：
+	browser.quit()
+```
+
+--------
+
+#### WebDriverWait
+
+```python
+WebDriverWait(driver ,timeout ,poll_frequency=0.5 ,ignored_exceptions=None)
+# driver：浏览器驱动
+# timeout：最长超时时间，默认以秒为单位
+# poll_frequency：检测的间隔步长，默认为0.5s
+# ignored_exceptions：超时后的抛出的异常信息，默认抛出NoSuchElementExeception异常。
+```
+
+**WebDriverWait与expected_conditions结合使用**(expected_conditions)下面会讲
+
+```py
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+
+
+wait = WebDriverWait(driver,10,0.5)
+
+element =wait.until(EC.presence_of_element_located((By.ID,"kw")),message="")
+```
 
 
 
@@ -1287,158 +1256,150 @@ print(response.read().decode('utf‐8'))
 
 ## Request
 
-
-
 ### 基本使用
 
-- 安装
+安装
 
-  - ```'py
-    pip install requests
-    ```
+```'py
+pip install requests
+```
 
-- response的属性以及类型
+response的属性以及类型
 
-  - | 类型                 |  models.Response   |
-    | :------------------- | :----------------: |
-    | response.text        |    获取网站源码    |
-    | response.encoding    | 访问或定制编码方式 |
-    | response.url         |   获取请求的url    |
-    | response.content     |   响应的字节类型   |
-    | response.status_code |    响应的状态码    |
-    | response.headers     |    响应的头信息    |
-
-------------------------------------------
+| 类型                 |  models.Response   |
+| :------------------- | :----------------: |
+| response.text        |    获取网站源码    |
+| response.encoding    | 访问或定制编码方式 |
+| response.url         |   获取请求的url    |
+| response.content     |   响应的字节类型   |
+| response.status_code |    响应的状态码    |
+| response.headers     |    响应的头信息    |
 
 ### Get请求
 
-- #### requests.get()
+requests.get()
 
-- ```py
-  import requests
-  url = 'http://www.baidu.com/s?'
-  
-  headers = {
-  'User‐Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
-  
-  data = {
-  'wd':'北京'
-  }
-  
-  # url  请求资源路径
-  # params 参数
-  # kwargs 字典
-  response =
-  requests.get(url,params=data,headers=headers)
-  
-  #定制参数
-  	#参数使用params传递
-  	#参数无需urlencode编码
-  	#不需要请求对象的定制
-  	#请求资源路径中？可加可不加
-      
-  
-  ```
+```py
+import requests
+url = 'http://www.baidu.com/s?'
 
-- ### 总结
+headers = {
+'User‐Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
 
-  - ##### （1）参数使用params传递
+data = {
+'wd':'北京'
+}
 
-  - ##### （2）参数无需urlencode编码
+# url  请求资源路径
+# params 参数
+# kwargs 字典
+response =
+requests.get(url,params=data,headers=headers)
 
-  - ##### （3）不需要请求对象的定制
+#定制参数
+	#参数使用params传递
+	#参数无需urlencode编码
+	#不需要请求对象的定制
+	#请求资源路径中？可加可不加
+    
 
-  - ##### （4）请求资源路径中的？可以加也可以不加
+```
+
+总结
+
+- ##### （1）参数使用params传递
+
+- ##### （2）参数无需urlencode编码
+
+- ##### （3）不需要请求对象的定制
+
+- ##### （4）请求资源路径中的？可以加也可以不加
 
 ------------------------------------
 
-
-
 ### Post请求
 
-- requests.post()
+requests.post()
 
-- ```py
-  import requests
-  post_url = 'http://fanyi.baidu.com/sug'
-  
-  headers={
-  'User‐Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'}
-  
-  data = {
-  'kw': 'eye'
-  }
-  
-  # url 请求地址
-  # data 请求参数
-  # kwargs 字典
-  
-  r = requests.post(url = post_url,headers=headers,data=data)
-  
-  ```
+```py
+import requests
+post_url = 'http://fanyi.baidu.com/sug'
 
-  - ### 总结
+headers={
+'User‐Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'}
 
-    - ##### （1）post请求 是不需要编解码
+data = {
+'kw': 'eye'
+}
 
-    - ##### （2）post请求的参数是data
+# url 请求地址
+# data 请求参数
+# kwargs 字典
 
-    - ##### （3）不需要请求对象的定制
+r = requests.post(url = post_url,headers=headers,data=data)
 
-  ------------------------------------
+```
 
-  
+总结
 
-- #### get和post区别？
+- ##### （1）post请求 是不需要编解码
 
-  1. ### get请求的参数名字是**params** 		post请求的参数的名字是**data**
+- ##### （2）post请求的参数是data
 
-  2. ### 请求资源路径后面可以不加? 
+- ##### （3）不需要请求对象的定制
 
-  3. ### 不需要手动编解码 
+----
 
-  4. ### 不需要做请求对象的定制
+### get和post区别？
+
+1. ### get请求的参数名字是**params** 		post请求的参数的名字是**data**
+
+2. ### 请求资源路径后面可以不加? 
+
+3. ### 不需要手动编解码 
+
+4. ### 不需要做请求对象的定制
 
 -------------------------------------------
 
 ### 代理
 
-- ```py
-  proxy定制
-  在请求中设置proxies参数
-  参数类型是一个字典类型
-  eg:
-  import requests
-  url = 'http://www.baidu.com/s?'
-  
-  headers = {
-  'user‐agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/65.0.3325.181 Safari/537.36'
-  }
-  
-  data = {
-  'wd':'ip'
-  }
-  
-  proxy = {
-  'http':'219.149.59.250:9797'
-  }
-  r = requests.get(url=url,params=data,headers=headers,proxies=proxy)
-  
-  with open('proxy.html','w',encoding='utf‐8') as fp:
-  fp.write(r.text)
-  ```
+```py
+proxy定制
+在请求中设置proxies参数
+参数类型是一个字典类型
+eg:
+import requests
+url = 'http://www.baidu.com/s?'
+
+headers = {
+'user‐agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+}
+
+data = {
+'wd':'ip'
+}
+
+proxy = {
+'http':'219.149.59.250:9797'
+}
+r = requests.get(url=url,params=data,headers=headers,proxies=proxy)
+
+with open('proxy.html','w',encoding='utf‐8') as fp:
+fp.write(r.text)
+```
 
 -------------------------------------------------
 
 ### Session
 
-- ```py
-  session = requests.session()
-  # 验证码的url的内容
-  response_code = session.get(code_url)
-  # 注意此时要使用二进制数据  因为我们要使用的是图片的下载
-  content_code = response_code.content
-  ```
+```py
+session = requests.session()
+# 验证码的url的内容
+response_code = session.get(code_url)
+# 注意此时要使用二进制数据  因为我们要使用的是图片的下载
+content_code = response_code.content
+```
 
 --------------------------------
 
