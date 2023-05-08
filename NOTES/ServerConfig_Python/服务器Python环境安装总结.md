@@ -47,13 +47,20 @@
 - 设置软链接
 
   - ```shell
-    #先删掉自带的python软连接
-    rm -f python3
-    rm -f pip3
+    cd /usr/bin
     
-    ln -sf /usr/local/bin/python3.10 /usr/bin/python3
-    ln -sf /usr/local/bin/pip3.10  /usr/bin/pip3
+    ll | grep python
+    
+    sudo rm ./python # 删除原有的软连接文件
+    sudo rm ./pip
+    sudo rm ./pip3
+    
+    sudo ln -s /usr/local/python3.10/bin/python3.10 /usr/bin/python
+    sudo ln -s /usr/local/python3.10/bin/pip3.10 /usr/bin/pip
+    sudo ln -s /usr/local/python3.10/bin/pip3.10 /usr/bin/pip3
     ```
+
+  **注：这里我们不能将系统中的 python3 命令链接到 python3.10 版本（这里我已经踩坑），因为 python3.10 版本还是发型版本，并不是稳定版本，若更改后则会导致 Ubuntu 系统下的很多 python 文件无法打开（比如你的 gnome 终端）！**
 
 
 ----

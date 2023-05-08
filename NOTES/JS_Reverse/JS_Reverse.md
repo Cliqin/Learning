@@ -1,6 +1,4 @@
-#                                         JS逆向
-
-## 安装第三方库
+# 安装第三方库
 
 - 安装执行js文件的execjs	`pip install pyexecjs2`
 
@@ -10,17 +8,59 @@
   res = execjs.compile(open('filename','r',encoding='utf-8').read()).call('fname',param)
   ```
 
+  - 使用前提环境配置
+
+    导包之前先执行此操作,避免执行js时报错
+
+  ```py
+  import subprocess
+  from functools import partial
+  subprocess.Popen = partial(subprocess.Popen, encoding='utf-8')
+  ```
+
   
 
 - 安装加密算法库	`npm install crypto-js`
 
 
 
- 
+# 数据加密
+
+**没有js混淆的情况**
+
+- 常用方法查找加密代码
+
+![image-20230507201548214](assets/image-20230507201548214.png)
+
+- 把加密算法库导入js文件
+
+```js
+const CryptoJS = require('crypto-js')
+```
 
 
 
-## MD5加密算法
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# MD5加密算法
 
 
 

@@ -32,7 +32,7 @@ sudo apt-get install libgtk2.0-dev
 
      ```shell
      ./configure \
-     --prefix=/usr/local/bochs \
+     --prefix=你的bochs位置 \
      --enable-debugger \
      --enable-disasm \
      --enable-iodebug \
@@ -50,7 +50,7 @@ sudo apt-get install libgtk2.0-dev
      sudo make install
      ```
 
-  8. 进入到bochs文件夹,运行`bin/bximage -hd -mode="flat" -size=60 -q hd60M.img`,生成hd60M.img文件
+  8. 进入到bochs文件夹,运行 `bin/bximage -hd -mode="flat" -size=60 -q hd60M.img `  ,生成hd60M.img文件
 
   9. 配置文件
 
