@@ -46,21 +46,33 @@ const CryptoJS = require('crypto-js')
 
 
 
+### 消息摘要算法
+
+- 怎么调用
+
+```js
+const crypto = require('crypto')
+
+function Sha256encrypt(text){
+    // 消息摘要算法
+    return crypto.createHash('sha256').update(text).digest('hex');
+}
+```
 
 
 
+### MD5加密算法
 
+- 怎么调用
 
+```js
+const crypto = require('crypto')
 
-
-
-
-
-
-
-
-
-# MD5加密算法
+function MD5Encrypt(text) {
+    // md5算法
+    return crypto.createHash('md5').update(text).digest('hex');
+}
+```
 
 
 
