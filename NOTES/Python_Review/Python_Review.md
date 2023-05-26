@@ -647,10 +647,23 @@ logger.info(f"第{retries+1}次运行")
 
 ### 导包
 
-- ```py
-  import urllib.request
-  import urllib.parse
-  ```
+- 正常导包
+
+```py
+import urllib.request
+import urllib.parse
+```
+
+- 相对路径导包
+
+```py
+import sys
+# 去上一路径
+sys.path.append("..")
+from Public import *
+```
+
+
 
 ----------------------------------------------
 

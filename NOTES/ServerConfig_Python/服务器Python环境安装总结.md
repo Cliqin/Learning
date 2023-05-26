@@ -216,3 +216,16 @@ pip freeze > requirements.txt
   ```
 
 - [ChromeDriver Mirror](https://registry.npmmirror.com/binary.html?path=chromedriver/)
+
+
+
+----
+
+## 安装模块
+
+- httpx
+
+```sh
+sudopython -m pip install httpx --user
+```
+
