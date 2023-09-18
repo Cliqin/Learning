@@ -179,7 +179,7 @@ pip freeze > requirements.txt
   sudo chromedriver --version
   ```
   
-- [ChromeDriver Mirror](https://link.zhihu.com/?target=http%3A//npm.taobao.org/mirrors/chromedriver/)
+- [ChromeDriver Mirror](http://npm.taobao.org/mirrors/chromedriver/)
 
 
 
