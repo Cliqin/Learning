@@ -112,16 +112,18 @@ print(s9.join('hello'))   #haealalao
 
 - #### 索引为**负数**形式
 
-  - ```python
-    windows[-1]#windows = [1,2,3,4,5] 他选择的是最后一个 这样就不需要用len来选择了 太聪明了挖槽
-    ```
+
+```python
+windows[-1]#windows = [1,2,3,4,5] 他选择的是最后一个 这样就不需要用len来选择了 太聪明了挖槽
+```
 
 - #### 形式:方括号[]
 
-  ```python
-  food_list = ['铁锅炖大鹅','酸菜五花肉']
-  print(food_list)      ['铁锅炖大鹅', '酸菜五花肉']
-  ```
+
+```python
+food_list = ['铁锅炖大鹅','酸菜五花肉']
+print(food_list)      ['铁锅炖大鹅', '酸菜五花肉']
+```
 
 - #### 添加
 
@@ -300,10 +302,11 @@ print(person.get('sex'))
 
   - 直接赋值
 
-    ```py
-    # 修改name的值为法外狂徒
-    person['name'] = '法外狂徒'
-    ```
+  
+  ```py
+  # 修改name的值为法外狂徒
+  person['name'] = '法外狂徒'
+  ```
 
 
 
@@ -311,10 +314,11 @@ print(person.get('sex'))
 
   - 直接赋值
 
-    ```py
-    # 如果使用变量名字['键'] = 数据时  这个键如果在字典中不存在  那么就会变成新增元素
-    person['age'] = 18
-    ```
+  
+  ```py
+  # 如果使用变量名字['键'] = 数据时  这个键如果在字典中不存在  那么就会变成新增元素
+  person['age'] = 18
+  ```
 
 
 
@@ -378,29 +382,30 @@ for item in person.items():
 
 - #### 复制字典
 
-  使用 `copy()` 方法来复制字典
 
-  ```py
-  thisdict =	{
-    "brand": "Porsche",
-    "model": "911",
-    "year": 1963
-  }
-  mydict = thisdict.copy()
-  print(mydict)
-  ```
+使用 `copy()` 方法来复制字典
 
-  使用 `dict()` `方法创建字典的副本`
+```py
+thisdict =	{
+  "brand": "Porsche",
+  "model": "911",
+  "year": 1963
+}
+mydict = thisdict.copy()
+print(mydict)
+```
 
-  ```py
-  thisdict =	{
-    "brand": "Porsche",
-    "model": "911",
-    "year": 1963
-  }
-  mydict = dict(thisdict)
-  print(mydict)
-  ```
+使用 `dict()` `方法创建字典的副本`
+
+```py
+thisdict =	{
+  "brand": "Porsche",
+  "model": "911",
+  "year": 1963
+}
+mydict = dict(thisdict)
+print(mydict)
+```
 
 ---------
 
@@ -465,54 +470,55 @@ def down_load(page,content):
 
   - 写数据(write)
 
-  ```py
-  f = open('test.txt', 'w') 
-  f.write('hello world, i am here!\n' * 5) 
-  f.close()
-  ```
 
-  - 读数据(read),(readline),(readlines)
+```py
+f = open('test.txt', 'w') 
+f.write('hello world, i am here!\n' * 5) 
+f.close()
+```
 
-  ```py
-  f = open('test.txt', 'r')
-  content = f.read(5) # 最多读取5个数据
-  print(content)
-  print("‐"*30) # 分割线，用来测试
-  
-  content = f.read() # 从上次读取的位置继续读取剩下的所有的数据
-  print(content)
-  
-  ```
+- 读数据(read),(readline),(readlines)
 
-  - 读数据(readline)
+```py
+f = open('test.txt', 'r')
+content = f.read(5) # 最多读取5个数据
+print(content)
+print("‐"*30) # 分割线，用来测试
 
-  ```py
-  f = open('test.txt', 'r')
-  
-  content = f.readline()
-  print("1:%s" % content)
-  
-  content = f.readline()
-  print("2:%s" % content)
-  
-  f.close()
-  ```
+content = f.read() # 从上次读取的位置继续读取剩下的所有的数据
+print(content)
 
-  - 读数据(readlines)
-  
-  `readlines`可以按照行的方式把整个文件中的内容进行**一次性读取**，并且返回的是一个列表，其中每一行为列表的 一个元素。
-  
-  ```py
-  f = open('test.txt', 'r')
-  
-  content = f.readlines()
-  print(type(content))
-  
-  for temp in content:
-  print(temp)
-  
-  f.close()
-  ```
+```
+
+- 读数据(readline)
+
+```py
+f = open('test.txt', 'r')
+
+content = f.readline()
+print("1:%s" % content)
+
+content = f.readline()
+print("2:%s" % content)
+
+f.close()
+```
+
+- 读数据(readlines)
+
+`readlines`可以按照行的方式把整个文件中的内容进行**一次性读取**，并且返回的是一个列表，其中每一行为列表的 一个元素。
+
+```py
+f = open('test.txt', 'r')
+
+content = f.readlines()
+print(type(content))
+
+for temp in content:
+print(temp)
+
+f.close()
+```
 
 ---------
 
@@ -525,65 +531,67 @@ def down_load(page,content):
 
 - ### 序列化
 
-  ```py
-  import json
-  file = open('names.txt', 'w')
-  names = ['zhangsan', 'lisi', 'wangwu', 'jerry', 'henry', 'merry', 'chris']
-  # file.write(names) 出错，不能直接将列表写入到文件里
-  # 可以调用 json的dumps方法，传入一个对象参数
-  result = json.dumps(names)
-  # dumps 方法得到的结果是一个字符串
-  print(type(result)) # <class 'str'>
-  # 可以将字符串写入到文件里
-  file.write(result)
-  file.close()
-  ```
 
-  #### 注意:
+```py
+import json
+file = open('names.txt', 'w')
+names = ['zhangsan', 'lisi', 'wangwu', 'jerry', 'henry', 'merry', 'chris']
+# file.write(names) 出错，不能直接将列表写入到文件里
+# 可以调用 json的dumps方法，传入一个对象参数
+result = json.dumps(names)
+# dumps 方法得到的结果是一个字符串
+print(type(result)) # <class 'str'>
+# 可以将字符串写入到文件里
+file.write(result)
+file.close()
+```
 
-  `dumps()`方法的作用是把**对象转换成为字符串**，它本身不具备将数据写入到文件的功能。
+#### 注意:
 
-  `dump()`方法可以在将对象转换成为字符串的同时，指定一个文件对象，把转换后的**字符串写入到这个文件**里。
+`dumps()`方法的作用是把**对象转换成为字符串**，它本身不具备将数据写入到文件的功能。
 
-  ```py
-  import json
-  
-  # dump方法可以接收一个文件参数，在将对象转换成为字符串的同时写入到文件里
-  json.dump(names, file)
-  file.close()
-  ```
-  
-  
+`dump()`方法可以在将对象转换成为字符串的同时，指定一个文件对象，把转换后的**字符串写入到这个文件**里。
+
+```py
+import json
+
+# dump方法可以接收一个文件参数，在将对象转换成为字符串的同时写入到文件里
+json.dump(names, file)
+file.close()
+```
+
+
 
 - ### 反序列化
 
   - #### 使用loads或load方法
 
-    ```py
-    import json
-    
-    # 调用loads方法，传入一个字符串，可以将这个字符串加载成为Python的对象
-    result = json.loads('["zhangsan", "lisi", "wangwu", "jerry", "henry", "merry", "chris"]')
-    
-    print(type(result)) # <class 'list'>
-    ```
 
-    ```py
-    import json
-    
-    # 以可读方式打开一个文件
-    file = open('names.txt', 'r')
-    
-    # 调用load方法，将文件里的内容加载成为一个Python对象
-    result = json.load(file)
-    
-    print(result)
-    file.close()
-    ```
+  ```py
+  import json
+  
+  # 调用loads方法，传入一个字符串，可以将这个字符串加载成为Python的对象
+  result = json.loads('["zhangsan", "lisi", "wangwu", "jerry", "henry", "merry", "chris"]')
+  
+  print(type(result)) # <class 'list'>
+  ```
 
-    区别:
+  ```py
+  import json
+  
+  # 以可读方式打开一个文件
+  file = open('names.txt', 'r')
+  
+  # 调用load方法，将文件里的内容加载成为一个Python对象
+  result = json.load(file)
+  
+  print(result)
+  file.close()
+  ```
 
-    #### loads传入的是**字符串** , load传入的是**文件**
+  区别:
+
+  #### loads传入的是**字符串** , load传入的是**文件**
 
 ​		
 
@@ -669,51 +677,51 @@ from Public import *
 
 ### Urllib库使用
 
-- ```py
-  urllib.request.urlopen() #模拟浏览器向服务器发送请求
-  
-  #response 服务器返回的数据
-  	#response的数据类型是HttpResponse
-  	#字节‐‐>字符串
-  		解码decode
-  	#字符串‐‐>字节
-  		编码encode
-  	read()       #字节形式读取二进制 扩展：rede(5)返回前几个字节
-  	readline()   #读取一行
-  	readlines()  #一行一行读取 直至结束
-  	getcode()    #获取状态码
-  	geturl()     #获取url
-  	getheaders() #获取headers
-  	
-  urllib.request.urlretrieve()
-  	#请求网页
-  	#请求图片
-  	#请求视频
-  
-  ```
+```py
+urllib.request.urlopen() #模拟浏览器向服务器发送请求
+
+#response 服务器返回的数据
+	#response的数据类型是HttpResponse
+	#字节‐‐>字符串
+		解码decode
+	#字符串‐‐>字节
+		编码encode
+	read()       #字节形式读取二进制 扩展：rede(5)返回前几个字节
+	readline()   #读取一行
+	readlines()  #一行一行读取 直至结束
+	getcode()    #获取状态码
+	geturl()     #获取url
+	getheaders() #获取headers
+	
+urllib.request.urlretrieve()
+	#请求网页
+	#请求图片
+	#请求视频
+
+```
 
 ----------------------------------------------
 
 ### 请求
 
-- ```py
-  import urllib.request
-  
-  url = 'http://www.baidu.com'
-  
-  #response的数据类型是HttpResponse
-  response = urllib.request.urlopen(url)
-  
-  # （3）获取响应中的页面的源码  content 内容的意思
-  # read方法  返回的是字节形式的二进制数据
-  # 我们要将二进制的数据转换为字符串
-  
-  # 二进制--》字符串  解码  decode('编码的格式')
-  content = response.read().decode('utf-8')
-  
-  # （4）打印数据
-  print(content)
-  ```
+```py
+import urllib.request
+
+url = 'http://www.baidu.com'
+
+#response的数据类型是HttpResponse
+response = urllib.request.urlopen(url)
+
+# （3）获取响应中的页面的源码  content 内容的意思
+# read方法  返回的是字节形式的二进制数据
+# 我们要将二进制的数据转换为字符串
+
+# 二进制--》字符串  解码  decode('编码的格式')
+content = response.read().decode('utf-8')
+
+# （4）打印数据
+print(content)
+```
 
 ----------------------------------------------
 
@@ -860,23 +868,25 @@ print(response.read().decode('utf‐8'))
 
 - #### 绕过登陆直接进入页面
 
-  ```py
-  #cookie中携带着你的登陆信息   如果有登陆之后的cookie,那么我们就可以携带cookie进入到任何页面
-  #referer判断当前路径是不是由上一个路径进来的   一般情况下 是做图片防盗链
-  ```
+
+```py
+#cookie中携带着你的登陆信息   如果有登陆之后的cookie,那么我们就可以携带cookie进入到任何页面
+#referer判断当前路径是不是由上一个路径进来的   一般情况下 是做图片防盗链
+```
 
 - #### 通过selenium获取cookies
 
-  ```py
-  from selenium import webdriver
-  
-  url = 'http://www.baidu.com'
-  driver = webdriver.Chrome()
-  driver.get(url)
-  
-  #关键步骤
-  cookies = {data['name']:data['value']for data in driver.get_cookies()}
-  ```
+
+```py
+from selenium import webdriver
+
+url = 'http://www.baidu.com'
+driver = webdriver.Chrome()
+driver.get(url)
+
+#关键步骤
+cookies = {data['name']:data['value']for data in driver.get_cookies()}
+```
 
 ----
 
@@ -944,63 +954,65 @@ proxies = random.choice(proxies_pool)
 
   安装模块(lxml)
 
-  ```py
-  1.安装lxml库
-  	pip install lxml ‐i https://pypi.douban.com/simple
-  2.导入lxml.etree
-  	from lxml import etree
-  3.#etree.parse() #解析本地文件
-  	html_tree = etree.parse('XX.html')
-  4.#etree.HTML() #服务器响应文件
-  	html_tree = etree.HTML(response.read().decode('utf‐8')
-  4.html_tree.xpath(xpath路径)
-  ```
+
+```py
+1.安装lxml库
+	pip install lxml ‐i https://pypi.douban.com/simple
+2.导入lxml.etree
+	from lxml import etree
+3.#etree.parse() #解析本地文件
+	html_tree = etree.parse('XX.html')
+4.#etree.HTML() #服务器响应文件
+	html_tree = etree.HTML(response.read().decode('utf‐8')
+4.html_tree.xpath(xpath路径)
+```
 
 - #### 开始解析
 
   解析规则
 
-  ```py
-  from lxml import etree
-  
-  # xpath解析
-  # （1）本地文件                                                etree.parse
-  # （2）服务器响应的数据  response.read().decode('utf-8') *****   etree.HTML()
-  
-  # xpath解析本地文件
-  tree = etree.parse('070_尚硅谷_爬虫_解析_xpath的基本使用.html')
-  
-  #tree.xpath('xpath路径')
-  
-  # 查找ul下面的li
-  li_list = tree.xpath('//body/ul/li')
-  
-  # 查找所有有id的属性的li标签
-  # text()获取标签中的内容
-  li_list = tree.xpath('//ul/li[@id]/text()')
-  
-  # 找到id为l1的li标签  注意引号的问题
-  li_list = tree.xpath('//ul/li[@id="l1"]/text()')
-  
-  # 查找到id为l1的li标签的class的属性值
-  li = tree.xpath('//ul/li[@id="l1"]/@class')
-  
-  # 查询id中包含l的li标签
-  #/text()来获取值
-  li_list = tree.xpath('//ul/li[contains(@id,"l")]/text()')
-  
-  # 查询id的值以l开头的li标签
-  li_list = tree.xpath('//ul/li[starts-with(@id,"c")]/text()')
-  
-  #查询id为l1和class为c1的
-  li_list = tree.xpath('//ul/li[@id="l1" and @class="c1"]/text()')
-  
-  li_list = tree.xpath('//ul/li[@id="l1"]/text() | //ul/li[@id="l2"]/text()')
-  
-  # 判断列表的长度
-  print(li_list)
-  print(len(li_list))
-  ```
+
+```py
+from lxml import etree
+
+# xpath解析
+# （1）本地文件                                                etree.parse
+# （2）服务器响应的数据  response.read().decode('utf-8') *****   etree.HTML()
+
+# xpath解析本地文件
+tree = etree.parse('070_尚硅谷_爬虫_解析_xpath的基本使用.html')
+
+#tree.xpath('xpath路径')
+
+# 查找ul下面的li
+li_list = tree.xpath('//body/ul/li')
+
+# 查找所有有id的属性的li标签
+# text()获取标签中的内容
+li_list = tree.xpath('//ul/li[@id]/text()')
+
+# 找到id为l1的li标签  注意引号的问题
+li_list = tree.xpath('//ul/li[@id="l1"]/text()')
+
+# 查找到id为l1的li标签的class的属性值
+li = tree.xpath('//ul/li[@id="l1"]/@class')
+
+# 查询id中包含l的li标签
+#/text()来获取值
+li_list = tree.xpath('//ul/li[contains(@id,"l")]/text()')
+
+# 查询id的值以l开头的li标签
+li_list = tree.xpath('//ul/li[starts-with(@id,"c")]/text()')
+
+#查询id为l1和class为c1的
+li_list = tree.xpath('//ul/li[@id="l1" and @class="c1"]/text()')
+
+li_list = tree.xpath('//ul/li[@id="l1"]/text() | //ul/li[@id="l2"]/text()')
+
+# 判断列表的长度
+print(li_list)
+print(len(li_list))
+```
 
 ---------------------------------------------------
 
@@ -1008,21 +1020,22 @@ proxies = random.choice(proxies_pool)
 
 - #### 安装模块
 
-  ```py
-  #pip安装：
-  pip install jsonpath
-  ```
+
+```py
+#pip安装：
+pip install jsonpath
+```
 
 - #### 使用
 
-  ```py
-  import json
-  import jsonpath
-  
-  obj = json.load(open('json文件', 'r', encoding='utf‐8'))
-  ret = jsonpath.jsonpath(obj, 'jsonpath语法')
-  ```
-  
+
+```py
+import json
+import jsonpath
+
+obj = json.load(open('json文件', 'r', encoding='utf‐8'))
+ret = jsonpath.jsonpath(obj, 'jsonpath语法')
+```
 
 ![1](assets/1.png)
 
@@ -1034,122 +1047,127 @@ proxies = random.choice(proxies_pool)
 
 - #### 安装模块
 
-  ```py
-  1.安装
-  pip install bs4
-  ```
+
+```py
+1.安装
+pip install bs4
+```
 
 - #### 接收对象
 
-  ```py
-  #2.导入
-  from bs4 import BeautifulSoup
-  
-  #3.创建对象
-  #服务器响应的文件生成对象
-  soup = BeautifulSoup(response.read().decode(), 'lxml')
-  
-  #本地文件生成对象
-  soup = BeautifulSoup(open('1.html'), 'lxml')
-  
-  #注意：默认打开文件的编码格式gbk所以需要指定打开编码格式
-  ```
+
+```py
+#2.导入
+from bs4 import BeautifulSoup
+
+#3.创建对象
+#服务器响应的文件生成对象
+soup = BeautifulSoup(response.read().decode(), 'lxml')
+
+#本地文件生成对象
+soup = BeautifulSoup(open('1.html'), 'lxml')
+
+#注意：默认打开文件的编码格式gbk所以需要指定打开编码格式
+```
 
 - #### 节点定位
 
   比较人性化
 
-  ```py
-  1.根据标签名查找节点
-  	soup.a 【注】只能找到第一个a
-  	soup.a.name
-  	soup.a.attrs
-      	
-  2.函数
-  
-  (1)#.find(返回一个对象)
-  	find('a')：#只找到第一个a标签
-  	find('a', title='名字')#标签
-  	find('a', class_='名字')#标签  class要改成class_
-      
-  (2)#.find_all(返回一个列表)
-  	find_all('a') 查找到所有的a
-  	find_all(['a', 'span']) 返回所有的a和span #注意格式,要写成列表
-  	find_all('a', limit=2) 只找前两个a
-      
-  (3)#.select(根据选择器得到节点对象)【推荐】(CSS语法)
-  	# element
-  		eg:p
-          print(soup.select('a'))	#多个a标签
-          
-  	# .class
-  		eg:.firstname
-          print(soup.select('.a1'))
-          
-  	# #id
-  		eg:#firstname
-          print(soup.select('#l1'))
-          
-  	# 属性选择器
-  		[attribute]
-  			eg:li = soup.select('li[class]')
-  		[attribute=value]
-  			eg:li = soup.select('li[class="hengheng1"]')
-          
-  	# 层级选择器
-      
-      	#  后代选择器
-  		element element
-  			div p
-          
-          # 子代选择器
-          # 注意：很多的计算机编程语言中 如果不加空格不会输出内容  但是在bs4中 不会报错 会显示内容
-  		element>element
-  			div>p
-          
-          # 找到div标签和p标签的所有的对象
-  		element,element
-  			div,p    
-  				eg:soup = soup.select('a,span')
-  ```
 
-  - #### 注意
+```py
+1.根据标签名查找节点
+	soup.a 【注】只能找到第一个a
+	soup.a.name
+	soup.a.attrs
+    	
+2.函数
 
-    ```py
-    # select()一般返回的是列表,记得选其中的内容才会变成标签
-    ```
-
+(1)#.find(返回一个对象)
+	find('a')：#只找到第一个a标签
+	find('a', title='名字')#标签
+	find('a', class_='名字')#标签  class要改成class_
     
+(2)#.find_all(返回一个列表)
+	find_all('a') 查找到所有的a
+	find_all(['a', 'span']) 返回所有的a和span #注意格式,要写成列表
+	find_all('a', limit=2) 只找前两个a
+    
+(3)#.select(根据选择器得到节点对象)【推荐】(CSS语法)
+	# element
+		eg:p
+        print(soup.select('a'))	#多个a标签
+        
+	# .class
+		eg:.firstname
+        print(soup.select('.a1'))
+        
+	# #id
+		eg:#firstname
+        print(soup.select('#l1'))
+        
+	# 属性选择器
+		[attribute]
+			eg:li = soup.select('li[class]')
+		[attribute=value]
+			eg:li = soup.select('li[class="hengheng1"]')
+        
+	# 层级选择器
+    
+    	#  后代选择器
+		element element
+			div p
+        
+        # 子代选择器
+        # 注意：很多的计算机编程语言中 如果不加空格不会输出内容  但是在bs4中 不会报错 会显示内容
+		element>element
+			div>p
+        
+        # 找到div标签和p标签的所有的对象
+		element,element
+			div,p    
+				eg:soup = soup.select('a,span')
+```
+
+- #### 注意
+
+
+```py
+# select()一般返回的是列表,记得选其中的内容才会变成标签
+```
+
+
 
 - #### 获取内容
 
-  ```py
-  (1) #获取节点内容：适用于标签中嵌套标签的结构
-  	obj.string
-  	obj.get_text() #【推荐】
-      
-  (2) #节点的属性
-  	tag.name  #获取标签名
-  		eg:tag = find('li')
-  			print(tag.name)
-                        
-  	
-      #ag.attrs将属性值作为一个字典返回
-      # 格式为 {'id': 'p1', 'class': ['p1']}
-                    
-  (3) #获取节点属性值
-  	obj.attrs.get('title') #【常用】
-  	obj.get('title')
-  	obj['title']
-  ```
 
-  #### 注意:
+```py
+(1) #获取节点内容：适用于标签中嵌套标签的结构
+	obj.string
+	obj.get_text() #【推荐】
+    
+(2) #节点的属性
+	tag.name  #获取标签名
+		eg:tag = find('li')
+			print(tag.name)
+                      
+	
+    #ag.attrs将属性值作为一个字典返回
+    # 格式为 {'id': 'p1', 'class': ['p1']}
+                  
+(3) #获取节点属性值
+	obj.attrs.get('title') #【常用】
+	obj.get('title')
+	obj['title']
+```
 
-  ```py
-  # 如果标签对象中 只有内容 那么string和get_text()都可以使用
-  
-  # 如果标签对象中 除了内容还有标签 那么string就获取不到数据 而get_text()是可以获取数据
-  ```
+#### 注意:
+
+```py
+# 如果标签对象中 只有内容 那么string和get_text()都可以使用
+
+# 如果标签对象中 除了内容还有标签 那么string就获取不到数据 而get_text()是可以获取数据
+```
 
 ---------
 
