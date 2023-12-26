@@ -237,3 +237,61 @@ set_cursor:
    out dx, al
    popad
    ret
+
+global mouse_move
+mouse_move:
+   push eax
+   push ecx
+   push edx
+
+   mov ax, SELECTOR_VIDEO	; 不能直接把立即数送入段寄存器
+
+   mov gs, ax
+   mov ecx, [esp+16]	      ; 读取传入的参数
+
+   inc ecx
+   mov byte [gs:ecx], 0xA4
+   
+   dec ecx
+   pop eax
+   pop edx
+   pop ecx
+   ret
+
+global mouse_recover
+mouse_recover:
+   push eax
+   push ecx
+   push edx
+
+   mov ax, SELECTOR_VIDEO	; 不能直接把立即数送入段寄存器
+
+   mov gs, ax
+   mov ecx, [esp+16]	      ; 读取传入的参数
+
+   inc ecx
+   mov byte [gs:ecx], 0x07
+   
+   dec ecx
+   pop eax
+   pop edx
+   pop ecx
+   ret
+
+global mouse_extract
+mouse_extract:
+   push eax
+   push ecx
+
+   mov ax, SELECTOR_VIDEO	; 不能直接把立即数送入段寄存器
+
+   mov gs, ax
+   mov ecx, [esp+12]	      ; 读取传入的参数
+
+   mov eax , [gs:ecx]
+
+   mov [0x0ff0] ,ax
+
+   pop ecx
+   pop eax
+   ret
