@@ -595,41 +595,41 @@ LOAD build/dir.o
                 0x00000000c000d000                . = ALIGN (CONSTANT (MAXPAGESIZE))
                 0x00000000c000d000                . = SEGMENT_START ("rodata-segment", (ALIGN (CONSTANT (MAXPAGESIZE)) + (. & (CONSTANT (MAXPAGESIZE) - 0x1))))
 
-.rodata         0x00000000c000d000     0x20db
+.rodata         0x00000000c000d000     0x2107
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00000000c000d000       0xa8 build/main.o
- .rodata        0x00000000c000d0a8        0xa build/init.o
- *fill*         0x00000000c000d0b2        0x2 
- .rodata        0x00000000c000d0b4      0x2cd build/interrupt.o
- *fill*         0x00000000c000d381        0x3 
- .rodata        0x00000000c000d384       0x88 build/timer.o
- .rodata        0x00000000c000d40c       0x3f build/debug.o
- *fill*         0x00000000c000d44b        0x1 
- .rodata        0x00000000c000d44c      0x3bd build/memory.o
- *fill*         0x00000000c000d809        0x3 
- .rodata        0x00000000c000d80c       0x6b build/bitmap.o
- *fill*         0x00000000c000d877        0x1 
- .rodata        0x00000000c000d878       0xc4 build/string.o
- .rodata        0x00000000c000d93c      0x2dd build/thread.o
- *fill*         0x00000000c000dc19        0x3 
- .rodata        0x00000000c000dc1c      0x135 build/sync.o
- .rodata        0x00000000c000dd51       0x36 build/keyboard.o
- *fill*         0x00000000c000dd87        0x1 
- .rodata        0x00000000c000dd88       0xa8 build/ioqueue.o
- .rodata        0x00000000c000de30       0x27 build/tss.o
- *fill*         0x00000000c000de57        0x1 
- .rodata        0x00000000c000de58       0xe0 build/process.o
- .rodata        0x00000000c000df38       0x27 build/syscall-init.o
- *fill*         0x00000000c000df5f        0x1 
- .rodata        0x00000000c000df60      0x1f9 build/ide.o
- *fill*         0x00000000c000e159        0x3 
- .rodata        0x00000000c000e15c      0x889 build/fs.o
- *fill*         0x00000000c000e9e5        0x3 
- .rodata        0x00000000c000e9e8       0xc2 build/inode.o
- *fill*         0x00000000c000eaaa        0x2 
- .rodata        0x00000000c000eaac      0x41e build/file.o
- *fill*         0x00000000c000eeca        0x2 
- .rodata        0x00000000c000eecc      0x20f build/dir.o
+ .rodata        0x00000000c000d000       0xbc build/main.o
+ .rodata        0x00000000c000d0bc        0xa build/init.o
+ *fill*         0x00000000c000d0c6        0x2 
+ .rodata        0x00000000c000d0c8      0x2cd build/interrupt.o
+ *fill*         0x00000000c000d395        0x3 
+ .rodata        0x00000000c000d398       0x88 build/timer.o
+ .rodata        0x00000000c000d420       0x3f build/debug.o
+ *fill*         0x00000000c000d45f        0x1 
+ .rodata        0x00000000c000d460      0x3bd build/memory.o
+ *fill*         0x00000000c000d81d        0x3 
+ .rodata        0x00000000c000d820       0x6b build/bitmap.o
+ *fill*         0x00000000c000d88b        0x1 
+ .rodata        0x00000000c000d88c       0xc4 build/string.o
+ .rodata        0x00000000c000d950      0x2dd build/thread.o
+ *fill*         0x00000000c000dc2d        0x3 
+ .rodata        0x00000000c000dc30      0x135 build/sync.o
+ .rodata        0x00000000c000dd65       0x36 build/keyboard.o
+ *fill*         0x00000000c000dd9b        0x1 
+ .rodata        0x00000000c000dd9c       0xa8 build/ioqueue.o
+ .rodata        0x00000000c000de44       0x27 build/tss.o
+ *fill*         0x00000000c000de6b        0x1 
+ .rodata        0x00000000c000de6c       0xe0 build/process.o
+ .rodata        0x00000000c000df4c       0x27 build/syscall-init.o
+ *fill*         0x00000000c000df73        0x1 
+ .rodata        0x00000000c000df74      0x1f9 build/ide.o
+ *fill*         0x00000000c000e16d        0x3 
+ .rodata        0x00000000c000e170      0x8a1 build/fs.o
+ *fill*         0x00000000c000ea11        0x3 
+ .rodata        0x00000000c000ea14       0xc2 build/inode.o
+ *fill*         0x00000000c000ead6        0x2 
+ .rodata        0x00000000c000ead8      0x41e build/file.o
+ *fill*         0x00000000c000eef6        0x2 
+ .rodata        0x00000000c000eef8      0x20f build/dir.o
 
 .rodata1
  *(.rodata1)
@@ -638,56 +638,56 @@ LOAD build/dir.o
  *(.eh_frame_hdr)
  *(.eh_frame_entry .eh_frame_entry.*)
 
-.eh_frame       0x00000000c000f0dc     0x1b7c
+.eh_frame       0x00000000c000f108     0x1b7c
  *(.eh_frame)
- .eh_frame      0x00000000c000f0dc       0xc4 build/main.o
- .eh_frame      0x00000000c000f1a0       0x24 build/init.o
+ .eh_frame      0x00000000c000f108       0xc4 build/main.o
+ .eh_frame      0x00000000c000f1cc       0x24 build/init.o
                                          0x50 (松开之前的大小)
- .eh_frame      0x00000000c000f1c4      0x1b4 build/interrupt.o
+ .eh_frame      0x00000000c000f1f0      0x1b4 build/interrupt.o
                                         0x1e0 (松开之前的大小)
- .eh_frame      0x00000000c000f378       0xf0 build/timer.o
+ .eh_frame      0x00000000c000f3a4       0xf0 build/timer.o
                                         0x130 (松开之前的大小)
- .eh_frame      0x00000000c000f468       0x1c build/debug.o
+ .eh_frame      0x00000000c000f494       0x1c build/debug.o
                                          0x48 (松开之前的大小)
- .eh_frame      0x00000000c000f484      0x2dc build/memory.o
+ .eh_frame      0x00000000c000f4b0      0x2dc build/memory.o
                                         0x31c (松开之前的大小)
- .eh_frame      0x00000000c000f760       0x90 build/bitmap.o
+ .eh_frame      0x00000000c000f78c       0x90 build/bitmap.o
                                          0xbc (松开之前的大小)
- .eh_frame      0x00000000c000f7f0      0x168 build/string.o
+ .eh_frame      0x00000000c000f81c      0x168 build/string.o
                                         0x194 (松开之前的大小)
- .eh_frame      0x00000000c000f958      0x1d8 build/thread.o
+ .eh_frame      0x00000000c000f984      0x1d8 build/thread.o
                                         0x218 (松开之前的大小)
- .eh_frame      0x00000000c000fb30      0x148 build/list.o
+ .eh_frame      0x00000000c000fb5c      0x148 build/list.o
                                         0x188 (松开之前的大小)
- .eh_frame      0x00000000c000fc78       0xd8 build/console.o
+ .eh_frame      0x00000000c000fca4       0xd8 build/console.o
                                         0x118 (松开之前的大小)
- .eh_frame      0x00000000c000fd50       0xdc build/sync.o
+ .eh_frame      0x00000000c000fd7c       0xdc build/sync.o
                                         0x11c (松开之前的大小)
- .eh_frame      0x00000000c000fe2c       0x68 build/keyboard.o
+ .eh_frame      0x00000000c000fe58       0x68 build/keyboard.o
                                          0xa8 (松开之前的大小)
- .eh_frame      0x00000000c000fe94      0x11c build/ioqueue.o
+ .eh_frame      0x00000000c000fec0      0x11c build/ioqueue.o
                                         0x15c (松开之前的大小)
- .eh_frame      0x00000000c000ffb0       0x6c build/tss.o
+ .eh_frame      0x00000000c000ffdc       0x6c build/tss.o
                                          0xac (松开之前的大小)
- .eh_frame      0x00000000c001001c       0xd8 build/process.o
+ .eh_frame      0x00000000c0010048       0xd8 build/process.o
                                         0x118 (松开之前的大小)
- .eh_frame      0x00000000c00100f4       0x8c build/syscall.o
+ .eh_frame      0x00000000c0010120       0x8c build/syscall.o
                                          0xb8 (松开之前的大小)
- .eh_frame      0x00000000c0010180       0x48 build/syscall-init.o
+ .eh_frame      0x00000000c00101ac       0x48 build/syscall-init.o
                                          0x88 (松开之前的大小)
- .eh_frame      0x00000000c00101c8       0x90 build/stdio.o
+ .eh_frame      0x00000000c00101f4       0x90 build/stdio.o
                                          0xd0 (松开之前的大小)
- .eh_frame      0x00000000c0010258      0x27c build/ide.o
+ .eh_frame      0x00000000c0010284      0x27c build/ide.o
                                         0x2bc (松开之前的大小)
- .eh_frame      0x00000000c00104d4       0x28 build/stdio-kernel.o
+ .eh_frame      0x00000000c0010500       0x28 build/stdio-kernel.o
                                          0x54 (松开之前的大小)
- .eh_frame      0x00000000c00104fc      0x368 build/fs.o
+ .eh_frame      0x00000000c0010528      0x368 build/fs.o
                                         0x3a8 (松开之前的大小)
- .eh_frame      0x00000000c0010864      0x100 build/inode.o
+ .eh_frame      0x00000000c0010890      0x100 build/inode.o
                                         0x140 (松开之前的大小)
- .eh_frame      0x00000000c0010964      0x178 build/file.o
+ .eh_frame      0x00000000c0010990      0x178 build/file.o
                                         0x1cc (松开之前的大小)
- .eh_frame      0x00000000c0010adc      0x17c build/dir.o
+ .eh_frame      0x00000000c0010b08      0x17c build/dir.o
                                         0x1bc (松开之前的大小)
  *(.eh_frame.*)
 

@@ -25,8 +25,8 @@ int main(void) {
    printf("/`s info\n   i_no:%d\n   size:%d\n   filetype:%s\n", \
 	 obj_stat.st_ino, obj_stat.st_size, \
 	 obj_stat.st_filetype == 2 ? "directory" : "regular");
-   sys_stat("/dir1", &obj_stat);
-   printf("/dir1`s info\n   i_no:%d\n   size:%d\n   filetype:%s\n", \
+   sys_stat("/myDir", &obj_stat);
+   printf("/myDir`s info\n   i_no:%d\n   size:%d\n   filetype:%s\n", \
 	 obj_stat.st_ino, obj_stat.st_size, \
 	 obj_stat.st_filetype == 2 ? "directory" : "regular");
 /********  测试代码  ********/

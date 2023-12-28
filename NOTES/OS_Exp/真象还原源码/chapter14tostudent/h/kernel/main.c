@@ -23,7 +23,7 @@ int main(void) {
    process_execute(u_prog_b, "u_prog_b");
    thread_start("k_thread_a", 31, k_thread_a, "I am thread_a");
    thread_start("k_thread_b", 31, k_thread_b, "I am thread_b");
-   printf("/file1 delete %s!\n", sys_unlink("/file1") == 0 ? "done" : "fail");
+   printf("HEJIANHUI /myFile delete %s!\n", sys_unlink("/myFile") == 0 ? "done" : "fail");
    while(1);
    return 0;
 }

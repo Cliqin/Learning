@@ -22,11 +22,11 @@ int main(void) {
 /********  测试代码  ********/
    char cwd_buf[32] = {0};
    sys_getcwd(cwd_buf, 32);
-   printf("cwd:%s\n", cwd_buf);
-   sys_chdir("/dir1");
-   printf("change cwd now\n");
+   printf("HEJIANHUI cwd:%s\n", cwd_buf);
+   sys_chdir("/myDir");
+   printf("HEJIANHUI change cwd now\n");
    sys_getcwd(cwd_buf, 32);
-   printf("cwd:%s\n", cwd_buf);
+   printf("HEJIANHUI cwd:%s\n", cwd_buf);
 /********  测试代码  ********/
    while(1);
    return 0;
