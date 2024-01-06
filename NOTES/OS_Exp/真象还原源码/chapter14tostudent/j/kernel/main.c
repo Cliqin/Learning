@@ -30,16 +30,16 @@ int main(void)
       printf("/myDir/subDir open done!\n");
       if (sys_closedir(p_dir) == 0)
       {
-         printf("HEJIANHUI /myDir/subDir close done!\n");
+         printf("CHENHONGYI /myDir/subDir close done!\n");
       }
       else
       {
-         printf("HEJIANHUI /myDir/subDir close fail!\n");
+         printf("CHENHONGYI /myDir/subDir close fail!\n");
       }
    }
    else
    {
-      printf("HEJIANHUI /myDir/subDir open fail!\n");
+      printf("CHENHONGYI /myDir/subDir open fail!\n");
    }
    while (1)
       ;

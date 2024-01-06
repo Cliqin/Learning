@@ -35,31 +35,31 @@ int main(void)
       {
          type = "directory";
       }
-      printf("HEJIANHUI       %s   %s\n", type, dir_e->filename);
+      printf("CHENHONGYI       %s   %s\n", type, dir_e->filename);
    }
    printf("try to delete nonempty directory /myDir/subDir\n");
    if (sys_rmdir("/myDir/subDir") == -1)
    {
-      printf("HEJIANHUI sys_rmdir: /myDir/subDir delete fail!\n");
+      printf("CHENHONGYI sys_rmdir: /myDir/subDir delete fail!\n");
    }
 
-   printf("HEJIANHUI try to delete /myDir/subDir/file2\n");
+   printf("CHENHONGYI try to delete /myDir/subDir/file2\n");
    if (sys_rmdir("/myDir/subDir/file2") == -1)
    {
-      printf("HEJIANHUI sys_rmdir: /myDir/subDir/file2 delete fail!\n");
+      printf("CHENHONGYI sys_rmdir: /myDir/subDir/file2 delete fail!\n");
    }
    if (sys_unlink("/myDir/subDir/file2") == 0)
    {
-      printf("HEJIANHUI sys_unlink: /myDir/subDir/file2 delete done\n");
+      printf("CHENHONGYI sys_unlink: /myDir/subDir/file2 delete done\n");
    }
 
    printf("try to delete directory /myDir/subDir again\n");
    if (sys_rmdir("/myDir/subDir") == 0)
    {
-      printf("HEJIANHUI /myDir/subDir delete done!\n");
+      printf("CHENHONGYI /myDir/subDir delete done!\n");
    }
 
-   printf("HEJIANHUI /myDir content after delete /myDir/subDir:\n");
+   printf("CHENHONGYI /myDir content after delete /myDir/subDir:\n");
    sys_rewinddir(dir);
    while ((dir_e = sys_readdir(dir)))
    {

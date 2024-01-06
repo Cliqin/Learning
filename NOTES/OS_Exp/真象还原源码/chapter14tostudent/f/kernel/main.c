@@ -28,22 +28,22 @@ int main(void) {
    printf("open /myFile, fd:%d\n", fd);
    char buf[64] = {0};
    int read_bytes = sys_read(fd, buf, 18);
-   printf("HEJIANHUI 1_ read %d bytes:\n%s\n", read_bytes, buf);
+   printf("CHENHONGYI 1_ read %d bytes:\n%s\n", read_bytes, buf);
 
    memset(buf, 0, 64);
    read_bytes = sys_read(fd, buf, 6);
-   printf("HEJIANHUI 2_ read %d bytes:\n%s", read_bytes, buf);
+   printf("CHENHONGYI 2_ read %d bytes:\n%s", read_bytes, buf);
 
    memset(buf, 0, 64);
    read_bytes = sys_read(fd, buf, 6);
-   printf("HEJIANHUI 3_ read %d bytes:\n%s", read_bytes, buf);
+   printf("CHENHONGYI 3_ read %d bytes:\n%s", read_bytes, buf);
 
    printf("________  close myFile and reopen  ________\n");
    sys_close(fd);
    fd = sys_open("/myFile", O_RDWR);
    memset(buf, 0, 64);
    read_bytes = sys_read(fd, buf, 60);
-   printf("HEJIANHUI 4_ read %d bytes:\n%s", read_bytes, buf);
+   printf("CHENHONGYI 4_ read %d bytes:\n%s", read_bytes, buf);
 
    sys_close(fd);
    while(1);

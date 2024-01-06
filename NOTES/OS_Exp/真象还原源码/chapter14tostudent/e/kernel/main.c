@@ -25,9 +25,9 @@ int main(void) {
 
    uint32_t fd = sys_open("/myFile", O_RDWR);
    printf("fd:%d\n", fd);
-   sys_write(fd, "hello,world.my name is HEJIANHUI\n", 40);
+   sys_write(fd, "hello,world.my name is CHENHONGYI\n", 40);
    sys_close(fd);
-   printf("HEJIANHUI %d closed now\n", fd);
+   printf("CHENHONGYI %d closed now\n", fd);
    while(1);
    return 0;
 }

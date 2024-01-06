@@ -33,7 +33,7 @@
 00000000000i[MEM0 ] allocated memory at 0x7fb94d14e010. after alignment, vector=0x7fb94d14f000
 00000000000i[MEM0 ] 32.00MB
 00000000000i[MEM0 ] mem block size = 0x00100000, blocks=32
-00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('/home/hejianhui/desktop/local/bochs/share/bochs/BIOS-bochs-latest')
+00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('/home/myfaker/desktop/local/bochs/share/bochs/BIOS-bochs-latest')
 00000000000i[     ] init_dev of 'pci' plugin device by virtual method
 00000000000i[DEV  ] i440FX PMC present at device 0, function 0
 00000000000i[     ] init_dev of 'pci2isa' plugin device by virtual method
@@ -54,9 +54,9 @@
 00000000000i[BXVGA] VBE Bochs Display Extension Enabled
 00000000000i[XGUI ] test_alloc_colors: 16 colors available out of 16 colors tried
 00000000000i[XGUI ] font 8 wide x 16 high, display depth = 24
-00000000000i[KMAP ] Loading keymap from '/home/hejianhui/desktop/local/bochs/share/bochs/keymaps/x11-pc-us.map'
+00000000000i[KMAP ] Loading keymap from '/home/myfaker/desktop/local/bochs/share/bochs/keymaps/x11-pc-us.map'
 00000000000i[KMAP ] Loaded 168 symbols
-00000000000i[MEM0 ] rom at 0xc0000/41472 ('/home/hejianhui/desktop/local/bochs/share/bochs/VGABIOS-lgpl-latest')
+00000000000i[MEM0 ] rom at 0xc0000/41472 ('/home/myfaker/desktop/local/bochs/share/bochs/VGABIOS-lgpl-latest')
 00000000000i[     ] init_dev of 'acpi' plugin device by virtual method
 00000000000i[DEV  ] ACPI Controller present at device 1, function 3
 00000000000i[     ] init_dev of 'ioapic' plugin device by virtual method

@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "syscall-init.h": "c",
-        "fs.h": "c"
+        "fs.h": "c",
+        "ide.h": "c"
     }
 }
