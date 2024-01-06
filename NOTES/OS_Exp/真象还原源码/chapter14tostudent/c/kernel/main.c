@@ -27,10 +27,10 @@ int main(void)
    printf("myFile fd is %d\n", fd);
    if (fd == -1)
    {
-      printf("CHENHONGYI file create fail!!!!!");
+      printf("HEJIANHUI file create fail!!!!!");
    }else
    {
-      printf("CHENHONGYI file create success!!!!!");
+      printf("HEJIANHUI file create success!!!!!");
    }
    while (1)
       ;

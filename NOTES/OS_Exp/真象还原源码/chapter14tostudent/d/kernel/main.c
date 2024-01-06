@@ -27,7 +27,7 @@ int main(void)
    uint32_t fd = sys_open("/myFile", O_RDONLY);
    printf("fd:%d\n", fd);
    sys_close(fd);
-   printf("CHENHONGYI %d closed now\n", fd);
+   printf("HEJIANHUI %d closed now\n", fd);
    while (1);
    return 0;
 }

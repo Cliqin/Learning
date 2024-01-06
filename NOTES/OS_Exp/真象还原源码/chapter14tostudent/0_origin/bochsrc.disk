@@ -3,8 +3,8 @@ megs: 32
 
 #设置真实机器的BIOS和VGA BIOS
 #修改成你们对应的地址
-romimage: file=/home/myfaker/desktop/local/bochs/share/bochs/BIOS-bochs-latest
-vgaromimage: file=/home/myfaker/desktop/local/bochs/share/bochs/VGABIOS-lgpl-latest
+romimage: file=/home/hejianhui/desktop/local/bochs/share/bochs/BIOS-bochs-latest
+vgaromimage: file=/home/hejianhui/desktop/local/bochs/share/bochs/VGABIOS-lgpl-latest
 
 #设置Bochs所使用的磁盘#设置启动盘符
 boot: disk
@@ -14,7 +14,7 @@ log: bochs.out
 
 #开启或关闭某些功能，修改成你们对应的地址
 mouse: enabled=1
-keyboard_mapping: enabled=1, map=/home/myfaker/desktop/local/bochs/share/bochs/keymaps/x11-pc-us.map
+keyboard_mapping: enabled=1, map=/home/hejianhui/desktop/local/bochs/share/bochs/keymaps/x11-pc-us.map
 
 #硬盘设置
 ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14

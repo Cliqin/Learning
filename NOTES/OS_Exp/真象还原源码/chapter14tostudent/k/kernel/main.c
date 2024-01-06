@@ -24,7 +24,7 @@ int main(void)
    struct dir *p_dir = sys_opendir("/myDir/subDir");
    if (p_dir)
    {
-      printf("CHENHONGYI /myDir/subDir open done!\ncontent:\n");
+      printf("HEJIANHUI /myDir/subDir open done!\ncontent:\n");
       char *type = NULL;
       struct dir_entry *dir_e = NULL;
       while ((dir_e = sys_readdir(p_dir)))
@@ -41,16 +41,16 @@ int main(void)
       }
       if (sys_closedir(p_dir) == 0)
       {
-         printf("CHENHONGYI /myDir/subDir close done!\n");
+         printf("HEJIANHUI /myDir/subDir close done!\n");
       }
       else
       {
-         printf("CHENHONGYI /myDir/subDir close fail!\n");
+         printf("HEJIANHUI /myDir/subDir close fail!\n");
       }
    }
    else
    {
-      printf("CHENHONGYI /myDir/subDir open fail!\n");
+      printf("HEJIANHUI /myDir/subDir open fail!\n");
    }
    /********  测试代码  ********/
    while (1)

@@ -168,14 +168,14 @@ mk_dir:
 
 hd:
 	dd if=$(BUILD_DIR)/kernel.bin \
-           of=/home/myfaker/desktop/local/bochs/hd60M.img \
+           of=/home/hejianhui/desktop/local/bochs/hd60M.img \
            bs=512 count=200 seek=9 conv=notrunc
 
 clean:
 	cd $(BUILD_DIR) && rm -f ./*
 
 cd1:
-	cd /home/myfaker/desktop/local/bochs && bin/bochs -f bochsrc.disk
+	cd /home/hejianhui/desktop/local/bochs && bin/bochs -f bochsrc.disk
 
 build: $(BUILD_DIR)/kernel.bin
 

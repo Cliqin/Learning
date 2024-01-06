@@ -60,7 +60,7 @@ static bool mount_partition(struct list_elem* pelem, int arg) {
       /*************************************************************/
 
       list_init(&cur_part->open_inodes);
-      printk("CHENHONGYI mount %s done!\n", part->name);
+      printk("HEJIANHUI mount %s done!\n", part->name);
 
    /* 此处返回true是为了迎合主调函数list_traversal的实现,与函数本身功能无关。
       只有返回true时list_traversal才会停止遍历,减少了后面元素无意义的遍历.*/
@@ -688,7 +688,7 @@ void filesys_init() {
 
 	       /* 只支持自己的文件系统.若磁盘上已经有文件系统就不再格式化了 */
 	       if (sb_buf->magic == 0x19590318) {
-		  printk("CHENHONGYI %s has filesystem\n", part->name);
+		  printk("HEJIANHUI %s has filesystem\n", part->name);
 	       } else {			  // 其它文件系统不支持,一律按无文件系统处理
 		  printk("formatting %s`s partition %s......\n", hd->name, part->name);
 		  partition_format(part);
