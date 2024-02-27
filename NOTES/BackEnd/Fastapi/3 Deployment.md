@@ -10,11 +10,11 @@
 
 3. 添加所需要的数据库
 
-   1.  ![image-20231005010839766](assets/image-20231005010839766.png)
+   1.  ![image-20231005010839766](https://oss.hejianhui.online/image-20231005010839766.png)
 
 4. 安装module(tortoise版本要合适才行,之后再补充)
 
-   1.  ![image-20231005012529223](assets/image-20231005012529223.png)
+   1.  ![image-20231005012529223](https://oss.hejianhui.online/image-20231005012529223.png)
 
 5. ### 调整配置
 

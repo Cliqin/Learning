@@ -53,7 +53,7 @@ cd Python-3.10.10
 
 ```shell
 cd /usr/bin
-    
+
 ll | grep python
 
 sudo rm ./python # 删除原有的软连接文件
@@ -219,6 +219,3 @@ sudo python -m pip install httpx --user
 
 ---
 
-
-
-# 

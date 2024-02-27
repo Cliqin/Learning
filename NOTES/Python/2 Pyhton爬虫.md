@@ -4,10 +4,10 @@
 
 找到解释器(interpreter)位置:
 
-- 我的位置![image-20220705150957392](assets/image-20220705150957392.png)
+- 我的位置![image-20220705150957392](https://oss.hejianhui.online/image-20220705150957392.png)
 - 安装在D盘的python当中的Scripts文件夹里![image-20220705151852157](assets/image-20220705151852157.png)
 
-如图![image-20220705152509639](assets/image-20220705152509639.png)
+如图![image-20220705152509639](https://oss.hejianhui.online/image-20220705152509639.png)
 
 第三方库
 
@@ -408,9 +408,9 @@ obj = json.load(open('json文件', 'r', encoding='utf‐8'))
 ret = jsonpath.jsonpath(obj, 'jsonpath语法')
 ```
 
-![1](assets/1.png)
+![1](https://oss.hejianhui.online/1.png)
 
-![2](assets/2.png)
+![2](https://oss.hejianhui.online/2.png)
 
 ----------------
 

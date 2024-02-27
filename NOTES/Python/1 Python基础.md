@@ -1,20 +1,10 @@
 
 
-目录
-
-[toc]
-
-
-
 # Python基础复习总结
 
 
 
 用input()函数
-
-
-
-
 
 ```python
 password = input("请输入密码:")
@@ -593,7 +583,7 @@ file.close()
 
   #### loads传入的是**字符串** , load传入的是**文件**
 
-​		
+
 
 ## 异常
 

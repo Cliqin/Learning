@@ -11,7 +11,7 @@ sudo apt-get purge docker-ce docker-ce-cli containerd.io
 在Ubuntu上，你可以使用以下命令来安装 Docker CE：
 
 ```shell
-codesudo apt-get update
+sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 ```
 
@@ -105,7 +105,7 @@ ENV JAVA_HOME=$JAVA_DIR/java8
 ENV PATH=$PATH:$JAVA_HOME/bin
 
 # 暴露端口
-EXPOSE 8080
+EXPOSE 80
 # 入口，java项目的启动命令
 ENTRYPOINT java -jar /tmp/app.jar
 ~~~
@@ -126,7 +126,7 @@ docker images
 #### 5. 启动容器
 
 ~~~shell
-docker run --name myjava -d -p 8080:8080 myjava:1.0
+docker run --name myjava -d -p 8080:80 myjava:1.0
 ~~~
 
 ## 二. 通过java镜像构建应用镜像

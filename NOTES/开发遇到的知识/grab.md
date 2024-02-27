@@ -26,6 +26,14 @@
 
 
 
+## 服务器
+
+- 阿里云的服务器2g运行内存实际只有1.6g
+
+  是因为开了 crashkernel ，可以在 `/etc/default/grub` 里把 `crashkernel` 开头的删掉，然后 `update-grub` ，重启
+
+  操作完后变成了1.882g
+
 
 
 
