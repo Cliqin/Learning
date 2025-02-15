@@ -5,7 +5,7 @@
 找到解释器(interpreter)位置:
 
 - 我的位置![image-20220705150957392](https://oss.hejianhui.online/image-20220705150957392.png)
-- 安装在D盘的python当中的Scripts文件夹里![image-20220705151852157](assets/image-20220705151852157.png)
+- 安装在D盘的python当中的Scripts文件夹里![image-20220705151852157](https://oss.hejianhui.online/image-20220705151852157.png)
 
 如图![image-20220705152509639](https://oss.hejianhui.online/image-20220705152509639.png)
 
